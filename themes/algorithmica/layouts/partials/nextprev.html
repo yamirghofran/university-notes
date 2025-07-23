@@ -15,33 +15,32 @@
       {{ end }}
 
       {{ if .IsSection }}
-        <div class='left'>
-        {{ with index $pages (add $selfIdx -1) }}
-          {{ with index (last 1 .Pages) 0 }}
-            <a href='{{.Permalink}}' id='prev-article'>← {{ .Title }}</a><br>
-          {{ end }}
-          <a href='{{.Permalink}}'>← ../{{ .Title }}</a>
-        {{ end }}
-        </div>
-        <div class='right'>
-        {{ with index .Pages 0 }}
-          <a href='{{.Permalink}}' id='next-article'>{{ .Title }} →</a><br>
-        {{ end }}
-        {{ with index $pages (add $selfIdx 1) }}
-          <a href='{{.Permalink}}'>../{{ .Title }} →</a>
-        {{ end }}
-        </div>
+         <div class='left'>
+         {{ with index $pages (add $selfIdx -1) }}
+           {{ with index (last 1 .Pages) 0 }}
+             <a href='{{.Permalink}}' id='prev-article'><img src="/icons/chevron-left-solid.svg" alt="Previous" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;">{{ .Title }}</a><br>
+           {{ end }}
+           <a href='{{.Permalink}}'><img src="/icons/chevron-left-solid.svg" alt="Previous" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;">../{{ .Title }}</a>
+         {{ end }}
+         </div>
+         <div class='right'>
+         {{ with index .Pages 0 }}
+           <a href='{{.Permalink}}' id='next-article'>{{ .Title }}<img src="/icons/chevron-right-solid.svg" alt="Next" style="width:14px;height:14px;vertical-align:middle;margin-left:4px;"></a><br>
+         {{ end }}
+         {{ with index $pages (add $selfIdx 1) }}
+           <a href='{{.Permalink}}'>../{{ .Title }}<img src="/icons/chevron-right-solid.svg" alt="Next" style="width:14px;height:14px;vertical-align:middle;margin-left:4px;"></a>
+         {{ end }}        </div>
       {{ else }}
         <div class='left'>
         {{ with index $pages (add $selfIdx -1) }}
-          <a href='{{.Permalink}}' id='prev-article'>← {{ .Title }}</a>
+          <a href='{{.Permalink}}' id='prev-article'><img src="/icons/chevron-left-solid.svg" alt="Previous" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;">{{ .Title }}</a>
         {{ else }}
-          <a href='{{.Parent.Permalink}}' id='prev-article'>← ../{{ .Parent.Title }}</a>
+          <a href='{{.Parent.Permalink}}' id='prev-article'><img src="/icons/chevron-left-solid.svg" alt="Previous" style="width:14px;height:14px;vertical-align:middle;margin-right:4px;">../{{ .Parent.Title }}</a>
         {{ end }}
         </div>
         <div class='right'>
         {{ with index $pages (add $selfIdx 1) }}
-          <a href='{{.Permalink}}' id='next-article'>{{ .Title }} →</a>
+          <a href='{{.Permalink}}' id='next-article'>{{ .Title }}<img src="/icons/chevron-right-solid.svg" alt="Next" style="width:14px;height:14px;vertical-align:middle;margin-left:4px;"></a>
         {{ else }}
           {{ $parent := .Parent }}
           {{ $parentIdx := -1 }}
@@ -54,7 +53,7 @@
           {{ end }}
         
           {{ with index $pages (add $parentIdx 1) }}
-            <a href='{{.Permalink}}' id='next-article'>../{{ .Title }} →</a>
+            <a href='{{.Permalink}}' id='next-article'>../{{ .Title }}<img src="/icons/chevron-right-solid.svg" alt="Next" style="width:14px;height:14px;vertical-align:middle;margin-left:4px;"></a>
           {{ end }}
         {{ end }}
         </div>

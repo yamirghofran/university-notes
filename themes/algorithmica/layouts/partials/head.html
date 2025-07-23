@@ -182,6 +182,58 @@
             }
         });
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const codeBlocks = document.querySelectorAll('pre code');
+  
+  codeBlocks.forEach(function(codeBlock) {
+    const pre = codeBlock.parentNode;
+    
+    const button = document.createElement('button');
+    button.className = 'copy-button';
+    button.setAttribute('aria-label', 'Copy code to clipboard');
+    button.innerHTML = '<img src="/icons/copy-solid.svg" alt="Copy" style="width:14px;height:14px;filter:invert(0.5)">';
+    
+      function showSuccess() {
+        button.innerHTML = '<img src="/icons/check-solid.svg" alt="Copied" style="width:14px;height:14px;filter:invert(0.5)">';
+        
+        setTimeout(function() {
+          button.innerHTML = '<img src="/icons/copy-solid.svg" alt="Copy" style="width:14px;height:14px;filter:invert(0.5)">';
+        }, 2000);
+      }
+      
+      function showError() {
+        button.innerHTML = '<img src="/icons/times-solid.svg" alt="Failed" style="width:14px;height:14px;filter:invert(0.5)">';
+        setTimeout(function() {
+          button.innerHTML = '<img src="/icons/copy-solid.svg" alt="Copy" style="width:14px;height:14px;filter:invert(0.5)">';
+        }, 2000);
+      }    
+    button.addEventListener('click', function() {
+      const text = codeBlock.textContent;
+      
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(showSuccess).catch(showError);
+      } else {
+        const textArea = document.createElement('textarea');
+        textArea.value = text;
+        document.body.appendChild(textArea);
+        textArea.select();
+        
+        try {
+          document.execCommand('copy');
+          showSuccess();
+        } catch (err) {
+          showError();
+        }
+        
+        document.body.removeChild(textArea);
+      }
+    });
+    
+    pre.appendChild(button);
+  });
+});
+</script>
 
     {{- partial "katex.html" . -}} {{ $title := print .Title " - " .Site.Title
     }} {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
