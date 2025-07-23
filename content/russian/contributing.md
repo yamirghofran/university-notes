@@ -4,7 +4,7 @@ authors:
   - Сергей Слотин
 date: 2021-01-23
 hideSidebar: true
-published: true
+draft: false
 ---
 
 Неполные гайдлайны, которые постепенно будут пополняться.

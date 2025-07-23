@@ -1,7 +1,7 @@
 ---
 title: Прямые и отрезки
 weight: 3
-published: true
+draft: false
 ---
 
 Отрезок можно задать двумя точками своих концов. В любом порядке — ведь он, в отличие от вектора, неориентирован.
@@ -111,9 +111,9 @@ $$
 -x = \frac{B_1 y + C_1}{A_1} \\
 -x = \frac{B_2 y + C_2}{A_2}
 \end{cases}
-\implies 
+\implies
 \frac{B_1 y + C_1}{A_1} = \frac{B_2 y + C_2}{A_2}
-\implies 
+\implies
 y = - \frac{A_1 C_2 - A_2 C_1}{A_1 B_2 - A_2 B_1}
 $$
 

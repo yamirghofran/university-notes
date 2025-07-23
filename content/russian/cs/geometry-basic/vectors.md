@@ -1,7 +1,7 @@
 ---
 title: Точки и вектора
 weight: 1
-published: true
+draft: false
 ---
 
 Отрезок, для которого указано, какой из его концов считается началом, а какой концом, называется *вектором*. Вектор на плоскости можно задать двумя числами — его координатами по горизонтали и вертикали.
@@ -59,14 +59,14 @@ r operator-(r a, r b) { return {a.x - b.x, a.y - b.y}; }
 Как вы думаете, как на самом деле работает `cin >> x`? Это тоже перегрузка оператора: `>>`. Делается это так:
 
 ```c++
-istream& operator>>(istream &in, r &p) { 
+istream& operator>>(istream &in, r &p) {
     in >> p.x >> p.y;
     return in;
 }
 
-ostream& operator<<(ostream &out, r &p) { 
+ostream& operator<<(ostream &out, r &p) {
     out << p.x << " " << p.y << endl;
-    return out;            
+    return out;
 }
 ```
 

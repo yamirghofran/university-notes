@@ -3,7 +3,7 @@ title: Решето Эратосфена
 authors:
   - Сергей Слотин
 weight: 3
-published: true
+draft: false
 ---
 
 **Определение.** Целое положительное число называется **простым**, если оно имеет ровно два различных натуральных делителя — единицу и самого себя. Единица простым числом не считается.
@@ -28,7 +28,7 @@ vector<bool> sieve(int n) {
         if (is_prime[i])
             for (int j = 2 * i; j <= n; j += i)
                 is_prime[j] = false;
-    return is_prime;            
+    return is_prime;
 }
 ```
 
@@ -56,7 +56,7 @@ $$
 $$
 \sum_k \frac{1}{\ln k} \frac{n}{k}
 \approx n \int \frac{1}{k \ln k}
-= n \ln \ln k \Big |_2^n 
+= n \ln \ln k \Big |_2^n
 = O(n \log \log n)
 $$
 
@@ -85,7 +85,7 @@ const int n = 1e6;
 
 int d[n + 1];
 vector<int> p;
- 
+
 for (int k = 2; k <= n; k++) {
     if (p[k] == 0) {
         d[k] = k;
