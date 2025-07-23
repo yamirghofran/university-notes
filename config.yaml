@@ -1,7 +1,7 @@
 baseURL: "https://yourdomain.com"
 theme:
-- algorithmica
-- reveal-hugo
+  - algorithmica
+  - reveal-hugo
 pygmentsUseClasses: true
 outputFormats:
   Reveal:
@@ -15,16 +15,17 @@ outputFormats:
     notAlternative: true
 outputs:
   home:
-  - HTML
-  - SearchIndex
+    - HTML
+    - SearchIndex
 markup:
   goldmark:
-    footnote: false  # katex conflict
+    footnote: false # katex conflict
     renderer:
       unsafe: true
+title: "Algorithmica"
 sectionPagesMenu: main
 params:
-  repo: "https://github.com/algorithmica-org/algorithmica"
+  repo: "https://github.com/yamirghofran/university-notes"
   reveal_hugo:
     #theme: white
     slide_number: true
