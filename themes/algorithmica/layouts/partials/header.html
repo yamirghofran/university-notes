@@ -42,14 +42,7 @@
           {{ end }}
         </div>
       {{ end }}
-      {{- if .IsTranslated -}}
-        <div>
-          <span>{{ T "translations" }}</span>
-          {{ range .Translations }}
-            <span><a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}</a></span>
-          {{ end }}
-        </div>
-      {{- end -}}
+
     </div>
   {{ end }}
 </header>

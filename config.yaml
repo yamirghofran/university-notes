@@ -1,4 +1,4 @@
-baseURL: "https://ru.algorithmica.org/"
+baseURL: "https://yourdomain.com"
 theme:
 - algorithmica
 - reveal-hugo
@@ -22,23 +22,7 @@ markup:
     footnote: false  # katex conflict
     renderer:
       unsafe: true
-defaultContentLanguage: en
 sectionPagesMenu: main
-languages:
-  en:
-    title: Algorithmica
-    baseURL: https://en.algorithmica.org
-    contentDir: content/english
-    languageName: English
-    languageCode: "en-us"
-    weight: 1
-  ru:
-    title: Алгоритмика
-    baseURL: https://ru.algorithmica.org
-    contentDir: content/russian
-    languageName: Русский
-    languageCode: "ru-ru"
-    weight: 2
 params:
   repo: "https://github.com/algorithmica-org/algorithmica"
   reveal_hugo:

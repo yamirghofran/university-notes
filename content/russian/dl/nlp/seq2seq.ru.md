@@ -1,3 +1,0 @@
----
-title: Seq2seq
----
