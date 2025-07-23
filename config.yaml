@@ -1,8 +1,8 @@
-baseURL: "https://yourdomain.com"
+title: "Yousef's Notes"
+baseURL: "https://notes.yousef.gg"
 theme:
   - algorithmica
   - reveal-hugo
-pygmentsUseClasses: true
 outputFormats:
   Reveal:
     baseName: index
@@ -22,7 +22,19 @@ markup:
     footnote: false # katex conflict
     renderer:
       unsafe: true
-title: "Algorithmica"
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    hl_inline: false
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    tabWidth: 4
+    wrapperClass: highlight
 sectionPagesMenu: main
 params:
   repo: "https://github.com/yamirghofran/university-notes"
