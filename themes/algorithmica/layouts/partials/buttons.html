@@ -25,13 +25,13 @@
     <a onClick='window.print()'>
       <img src='/icons/print-solid.svg' title='print'>
     </a>
-    <a href='https://prose.io/#algorithmica-org/algorithmica/edit/master/{{.Site.Params.ContentDir}}/{{$path}}'>
+    <a href='{{.Site.Params.Repo}}/blob/master/content/{{$path}}'>
       <img src='/icons/edit-solid.svg'
-           title='edit'
+           title='edit this page'
            style='width: 18px; position: relative; right: -2px; top: -1px'>
     </a>
-    <a href='{{.Site.Params.Repo}}/blob/master/{{.Site.Params.ContentDir}}/{{$path}}' class='github-main'>
-      <img src='/icons/github-brands.svg' title='view on github'>
+    <a href='{{.Site.Params.Repo}}' class='github-main'>
+      <img src='/icons/github-brands.svg' title='view repository'>
     </a>
   </div>
 </menu>
