@@ -1,0 +1,4 @@
+---
+title: Jacobi Numerical Method
+---
+
