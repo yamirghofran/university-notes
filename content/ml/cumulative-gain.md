@@ -8,7 +8,7 @@ $$
 CG_p \overset{\text{def}}{=} \sum_{i=1}^{p} rel_i
 $$
 
-```python
+```python {hl_lines=[2,"4-5"]}
 def calculate_cumulative_gain(relevance_scores):
     cumulative_gain = []
     current_sum = 0
