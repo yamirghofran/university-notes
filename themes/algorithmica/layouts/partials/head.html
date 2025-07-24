@@ -49,6 +49,12 @@
             document.getElementById("syntax-theme").href =
                 theme == "dark" ? "/syntax-dark.css" : "/syntax.css";
             localStorage.setItem("theme", theme);
+            
+            // Update theme icon
+            const themeIcon = document.getElementById('theme-icon');
+            if (themeIcon) {
+                themeIcon.src = theme == "dark" ? "/icons/sun-solid.svg" : "/icons/moon-solid.svg";
+            }
         }
 
         async function toggleSearch() {
@@ -184,6 +190,13 @@
     </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize theme icon
+  const currentTheme = localStorage.getItem("theme");
+  const themeIcon = document.getElementById('theme-icon');
+  if (themeIcon) {
+    themeIcon.src = currentTheme == "dark" ? "/icons/sun-solid.svg" : "/icons/moon-solid.svg";
+  }
+
   const codeBlocks = document.querySelectorAll('pre code');
   
   codeBlocks.forEach(function(codeBlock) {
