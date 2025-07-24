@@ -38,6 +38,10 @@ markup:
 sectionPagesMenu: main
 params:
   repo: "https://github.com/yamirghofran/university-notes"
+  description: "Yousef Amirghofran's Notes from BCSAI classes at IE University and beyond."
+  keywords: "computer science, algorithms, data structures, computer architecture, programming"
+  author: "Yousef Amirghofran"
+  image: "/img/og-image.png"
   reveal_hugo:
     #theme: white
     slide_number: true

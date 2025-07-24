@@ -2,6 +2,39 @@
     {{- partial "analytics.html" -}}
 
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <!--<link rel="icon" type="image/svg+xml" href="/favicon.svg" />-->
+
+    <!-- Meta tags -->
+    <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta name="keywords" content="{{ if .Keywords }}{{ delimit .Keywords ", " }}{{ else }}{{ .Site.Params.keywords }}{{ end }}" />
+    <meta name="author" content="{{ .Site.Params.author }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}" />
+    <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    {{ if .Params.image }}
+    <meta property="og:image" content="{{ .Params.image | absURL }}" />
+    {{ else if .Site.Params.image }}
+    <meta property="og:image" content="{{ .Site.Params.image | absURL }}" />
+    {{ end }}
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ .Permalink }}" />
+    <meta property="twitter:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}" />
+    <meta property="twitter:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
+    {{ if .Params.image }}
+    <meta property="twitter:image" content="{{ .Params.image | absURL }}" />
+    {{ else if .Site.Params.image }}
+    <meta property="twitter:image" content="{{ .Site.Params.image | absURL }}" />
+    {{ end }}
 
     {{ $style := resources.Get "style.sass" | toCSS | minify | fingerprint }}
     <link
@@ -49,7 +82,7 @@
             document.getElementById("syntax-theme").href =
                 theme == "dark" ? "/syntax-dark.css" : "/syntax.css";
             localStorage.setItem("theme", theme);
-            
+
             // Update theme icon
             const themeIcon = document.getElementById('theme-icon');
             if (themeIcon) {
@@ -198,32 +231,32 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const codeBlocks = document.querySelectorAll('pre code');
-  
+
   codeBlocks.forEach(function(codeBlock) {
     const pre = codeBlock.parentNode;
-    
+
     const button = document.createElement('button');
     button.className = 'copy-button';
     button.setAttribute('aria-label', 'Copy code to clipboard');
     button.innerHTML = '<img src="/icons/copy-solid.svg" alt="Copy" style="width:14px;height:14px;filter:invert(0.5)">';
-    
+
       function showSuccess() {
         button.innerHTML = '<img src="/icons/check-solid.svg" alt="Copied" style="width:14px;height:14px;filter:invert(0.5)">';
-        
+
         setTimeout(function() {
           button.innerHTML = '<img src="/icons/copy-solid.svg" alt="Copy" style="width:14px;height:14px;filter:invert(0.5)">';
         }, 2000);
       }
-      
+
       function showError() {
         button.innerHTML = '<img src="/icons/times-solid.svg" alt="Failed" style="width:14px;height:14px;filter:invert(0.5)">';
         setTimeout(function() {
           button.innerHTML = '<img src="/icons/copy-solid.svg" alt="Copy" style="width:14px;height:14px;filter:invert(0.5)">';
         }, 2000);
-      }    
+      }
     button.addEventListener('click', function() {
       const text = codeBlock.textContent;
-      
+
       if (navigator.clipboard && navigator.clipboard.writeText) {
         navigator.clipboard.writeText(text).then(showSuccess).catch(showError);
       } else {
@@ -231,18 +264,18 @@ document.addEventListener('DOMContentLoaded', function() {
         textArea.value = text;
         document.body.appendChild(textArea);
         textArea.select();
-        
+
         try {
           document.execCommand('copy');
           showSuccess();
         } catch (err) {
           showError();
         }
-        
+
         document.body.removeChild(textArea);
       }
     });
-    
+
     pre.appendChild(button);
   });
 });
