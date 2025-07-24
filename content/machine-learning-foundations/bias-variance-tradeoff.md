@@ -19,7 +19,7 @@ The "zone of solutions" is where both bias and variance are low. Once in this zo
 - Move to the left by [regularizing](/machine-learning-foundations/regularization) the model to reduce variance by making the model simpler.
 
 ### Increasing Complexity
-- In Shallow models like [[Y2Q2/Machine Learning Foundations/Linear Regression|Linear Regression]], you can increase complexity by switching to a higher-order polynomial regression.
+- In Shallow models like [Linear Regression](/machine-learning-foundations/linear-regression), you can increase complexity by switching to a higher-order polynomial regression.
 - In a [Decision Tree](/machine-learning-foundations/decision-tree), increase the depth of the tree.
 - In a [SVM](/machine-learning-foundations/support-vector-machines), use polynomial or RBF kernels instead of linear kernel.
 - In a [Neural Network](/machine-learning-foundations/neural-networks), increase its size: number of units per layer, and number of layers.

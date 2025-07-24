@@ -30,7 +30,7 @@ $$
 $$
 Experiments showed that mixup improves the generalization of [Neural Network](/machine-learning-foundations/neural-networks) models. The authors of mixup found that it increases the robustness to **adversarial examples** and stabilizes the training of **generative adversarial networks** (GANs).
 
-If compressed images are expected in production, they should also be simulated. 
+If compressed images are expected in production, they should also be simulated.
 
 Only used on-the-fly for training.
 
@@ -49,7 +49,7 @@ A hypernym is a word that has more general meaning. e.g. "mammal" is a hypernym 
 ## Gaussian Noise to Random Embeddings
 If you represent words or documents in your dataset using **word** or **document embeddings**, you can apply slight Gaussian noise to randomly chosen embedding features to make a variation of the same word or document. You can tune the number of features to modify and the noise intensity as [Hyperparameter](/machine-learning-foundations/parameters-and-hyperparameters)s by optimizing the performance on [validation data](/machine-learning-foundations/training-and-holdout-datasets).
 ## Replace a word in the sentence with k-nearest neighbor
-Alternatively, to replace a given word w in the sentence, you can find [[Y2Q2/Machine Learning Foundations/k-Nearest Neighbors|k-Nearest Neighbors]] to the word in the word embedding space and generate knew sentences by replacing the word with its respective neighbor. The nearest neighbors can be found using a measure such as [cosine similarity](/matrices-and-linear-transformations/cosine-similarity) or [Euclidean distance](/matrices-and-linear-transformations/minkowski-distances). The choice of the measure and the value of k, can be tuned as a [Hyperparameter](/machine-learning-foundations/parameters-and-hyperparameters).
+Alternatively, to replace a given word w in the sentence, you can find [KNN](/machine-learning-foundations/k-nearest-neighbors) to the word in the word embedding space and generate knew sentences by replacing the word with its respective neighbor. The nearest neighbors can be found using a measure such as [cosine similarity](/matrices-and-linear-transformations/cosine-similarity) or [Euclidean distance](/matrices-and-linear-transformations/minkowski-distances). The choice of the measure and the value of k, can be tuned as a [Hyperparameter](/machine-learning-foundations/parameters-and-hyperparameters).
 ## Use BERT to generate synonym for data augmentation
 A modern alternative to the k-nearest neighbors approach described above is to use a deep pre-trained model such as Bidirectional Encoder Representations from Transformers (BERT). Models like BERT are trained to predict a masked word given other words in a sentence. One can use BERT to generate k most likely predictions for a masked word and then use them as synonyms for data augmentation.
 

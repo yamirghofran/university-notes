@@ -20,7 +20,7 @@ It finds the optimal boundary ([hyperplane](/machine-learning-foundations/hyperp
 - [AUC-ROC](/machine-learning-foundations/auc-roc)
 - F-1 score
 - [MSE](/machine-learning-foundations/mean-squared-error)
-- [[Y2Q2/Machine Learning Foundations/R-squared|R-squared]]
+- [R Squared](/machine-learning-foundations/r-squared)
 ## Advantages
 - Effective in high dimensions
 - Robust to overfitting

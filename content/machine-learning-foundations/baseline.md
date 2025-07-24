@@ -20,7 +20,7 @@ Throwing a dice but be careful and look at the probability distributions
 - regression: predict the sample average of the target values in the training data.
 ## Machine Learning
 - Text classification, machine translation: [SVM](/machine-learning-foundations/support-vector-machines) with a linear kernel.
-- General numerical dataset: [[Y2Q2/Machine Learning Foundations/Linear Regression|Linear Regression]] or [[Y2Q2/Machine Learning Foundations/Logistic Regression|Logistic Regression]] or [[Y2Q2/Machine Learning Foundations/k-Nearest Neighbors|kNN]] (k=5)
+- General numerical dataset: [Linear Regression](/machine-learning-foundations/linear-regression) or [Logistic Regression](/machine-learning-foundations/logistic-regression) or [KNN](/machine-learning-foundations/k-nearest-neighbors) (k=5)
 - Image classification: [SVM](/machine-learning-foundations/support-vector-machines) with linear kernel, convolutional [[neural network]].
 ## Rule-based or groups of humans
 - e.g. doctors.

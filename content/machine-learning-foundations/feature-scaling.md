@@ -13,7 +13,7 @@ Assures no individual feature dominates, especially in the initial iterations of
 Reduces the risk of numerical overflow, a problem computers encounter when working with very small or very large numbers.
 
 ## Types of Scaling
-- [[Y2Q2/Machine Learning Foundations/Normalization|Normalization]]
+- [Normalization](/machine-learning-foundations/normalization)
 - [Standardization](/machine-learning-foundations/standardization)
 
 ## When/how to use Normalization and Standardization

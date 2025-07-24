@@ -10,7 +10,7 @@ They're not part of the [Training Dataset](/machine-learning-foundations/trainin
 e.g.
 - Maximum depth of the tree in the [decision tree](/machine-learning-foundations/decision-tree) learning algorithm
 - Misclassification penalty in [support vector machines](/machine-learning-foundations/support-vector-machines).
-- `k` in the [[Y2Q2/Machine Learning Foundations/k-Nearest Neighbors|kNN]] algorithm
+- `k` in the [kNN](/machine-learning-foundations/k-nearest-neighbors) algorithm
 - Target dimensionality in [dimensionality reduction](/machine-learning-foundations/dimensionality-reduction).
 
 # Parameters

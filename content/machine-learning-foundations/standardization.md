@@ -2,7 +2,7 @@
 title: Standardization
 ---
 
-aka z-score [[Y2Q2/Machine Learning Foundations/Normalization|Normalization]]
+aka z-score [Normalization](/machine-learning-foundations/normalization)
 -   Procedure to rescale the feature values to have the properties of a standard normal distribution with sample mean $\mu = 0$ and standard deviation from the sample mean $\sigma = 1$.
 -   Standardization formula:
 

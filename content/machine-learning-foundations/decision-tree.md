@@ -2,7 +2,7 @@
 title: Decision Tree
 ---
 
-The decision tree algorithm is a [[Y2Q2/Machine Learning Foundations/Supervised Learning|supervised]] machine learning method used for both #ml/classification and #ml/regression tasks. It works by recursively splitting the dataset into subsets based on [Feature](/machine-learning-foundations/feature-vector) values, creating a tree-like structure of decisions. Each internal node represents a decision based on a feature, each branch represents the outcome of that decision, and each leaf node represents a final prediction (class label or continuous value).
+The decision tree algorithm is a [supervised](/machine-learning-foundations/supervised-learning) machine learning method used for both #ml/classification and #ml/regression tasks. It works by recursively splitting the dataset into subsets based on [Feature](/machine-learning-foundations/feature-vector) values, creating a tree-like structure of decisions. Each internal node represents a decision based on a feature, each branch represents the outcome of that decision, and each leaf node represents a final prediction (class label or continuous value).
 ![](../attachments/cleanshot-2025-02-01-at-1038212x.png)
 ## How it works
 1. **Input Data:**
@@ -15,7 +15,7 @@ The decision tree algorithm is a [[Y2Q2/Machine Learning Foundations/Supervised 
    - The choice of feature and split point is determined by a splitting criterion:
      - For #ml/classification:
        - [Gini Index](/machine-learning-foundations/gini-index)
-       - [[Y2Q2/Machine Learning Foundations/Entropy|Entropy]]
+       - [Entropy](/machine-learning-foundations/entropy)
        - [Information Gain](/machine-learning-foundations/information-gain)
      - For #ml/regression :
        - **Variance Reduction**: Splits are chosen to minimize the variance of the target variable in the resulting subsets.

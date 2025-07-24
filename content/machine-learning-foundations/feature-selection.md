@@ -9,7 +9,7 @@ Not all features will be equally relevant for a given problem. Features present 
 - Increase computational cost: storage, computing time, dedicated technologies.
 - Overfitting risk: fitting [noise](/machine-learning-foundations/data-noise) instead of true patterns
 - Reduce model interpretability: harder to analyze and understand.
-- Distance metric degradation: in high dimensions, data points tend to be equidistant, reducing the effectiveness of distance-based algorithms (e.g. [[Y2Q2/Machine Learning Foundations/k-Nearest Neighbors|kNN]], [clustering](/machine-learning-foundations/clustering))
+- Distance metric degradation: in high dimensions, data points tend to be equidistant, reducing the effectiveness of distance-based algorithms (e.g. [kNN](/machine-learning-foundations/k-nearest-neighbors), [clustering](/machine-learning-foundations/clustering))
 
 ## Main Techniques
 - Cutting the Long Tail

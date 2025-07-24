@@ -8,14 +8,14 @@ A set of computational methods and algorithms to
 - 'infer' features of unseen data, somehow related to those learned in the given dataset.
 
 ML algorithms use one of four main learning paradigms
-- [[Y2Q2/Machine Learning Foundations/Supervised Learning|Supervised Learning]]
-- [[Y2Q2/Machine Learning Foundations/Semi-Supervised Learning|Semi-Supervised Learning]]
-- [[Y2Q2/Machine Learning Foundations/Unsupervised Learning|Unsupervised Learning]]
-- [[Y2Q2/Machine Learning Foundations/Reinforcement Learning|Reinforcement Learning]]
+- [Supervised Learning](/machine-learning-foundations/supervised-learning)
+- [Semi-Supervised Learning](/machine-learning-foundations/semi-supervised-learning)
+- [Unsupervised Learning](/machine-learning-foundations/unsupervised-learning)
+- [Reinforcement Learning](/machine-learning-foundations/reinforcement-learning)
 
 There are other differentiators as well:
-- [[Y2Q2/Machine Learning Foundations/Shallow vs Deep Learning|Shallow vs Deep Learning]]
-- [[Y2Q2/Machine Learning Foundations/Model-Based vs Instance-Based Learning|Model-Based vs Instance-Based Learning]]
+- [Shallow vs Deep Learning](/machine-learning-foundations/shallow-vs-deep-learning)
+- [Model-Based vs Instance-Based Learning](/machine-learning-foundations/model-based-vs-instance-based-learning)
 
 ---
 - [Machine Learning Engineering](/machine-learning-foundations/machine-learning-engineering)

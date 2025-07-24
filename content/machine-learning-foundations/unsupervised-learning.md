@@ -20,7 +20,7 @@ Use unlabeled data, modeling the underlying structure or distribution.
 Grouping similar data points based on intrinsic characteristics. e.g. identifying natural groupings or sub-populations in data; highlighting patterns or anomalies (e.g. segmentation in marketing)
 
 ### Dimensionality Reduction
-Reducing the number of features or dimensions in a dataset while retaining as much relevant information as possible. e.g. noise reduction, visualization, computational complexity. [[Y2Q2/Machine Learning Foundations/Principal Component Analysis|Principal Component Analysis]]
+Reducing the number of features or dimensions in a dataset while retaining as much relevant information as possible. e.g. noise reduction, visualization, computational complexity.
 
 ### Outlier Detection
 Identifying data points that deviate significantly from the majority of the dataset. These outliers may represent rare or anomalous events, errors, or unusual patterns.

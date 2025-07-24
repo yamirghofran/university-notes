@@ -3,7 +3,7 @@ title: k-Nearest Neighbors
 ---
 
 #ml/algorithms
-The k-nearest neighbors (KNN) algorithm is a simple, intuitive, and widely used machine learning algorithm for #ml/classification and #ml/regression tasks. It is a type of [[Y2Q2/Machine Learning Foundations/Model-Based vs Instance-Based Learning|Instance-Based]] learning (or lazy learning), meaning it does not explicitly learn a model during training but instead stores the entire dataset and makes predictions based on similarity measures at inference time.
+The k-nearest neighbors (KNN) algorithm is a simple, intuitive, and widely used machine learning algorithm for #ml/classification and #ml/regression tasks. It is a type of [Instance-Based](/machine-learning-foundations/model-based-vs-instance-based-learning) learning (or lazy learning), meaning it does not explicitly learn a model during training but instead stores the entire dataset and makes predictions based on similarity measures at inference time.
 
 ## How it works
 1. **Input Data:**

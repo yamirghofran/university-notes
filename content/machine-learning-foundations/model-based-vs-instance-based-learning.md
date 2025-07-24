@@ -12,4 +12,4 @@ After the model is trained, it can be saved on disk while the training data can 
 # Instance-Based
 Instance-based learning algorithms use the whole dataset as the model.
 
-One instance-based learning algorithm frequently used in practice is [[Y2Q2/Machine Learning Foundations/k-Nearest Neighbors]]. In classification, to predict a label for an input example, the kNN algorithm looks at the close neighborhood of the input example in the space of feature vectors an outputs the label that it saw most often in this close neighborhood.
+One instance-based learning algorithm frequently used in practice is [kNN](/machine-learning-foundations/k-nearest-neighbors). In classification, to predict a label for an input example, the kNN algorithm looks at the close neighborhood of the input example in the space of feature vectors an outputs the label that it saw most often in this close neighborhood.

@@ -11,4 +11,4 @@ For example, shearing a vector $\begin{pmatrix} x \\ y \end{pmatrix}$ by a facto
 $$
 \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} 1 & a \\ b & 1 \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} x + ay \\ bx + y \end{pmatrix}
 $$
-Note that [[Y2Q2/Matrices & Linear Transformations/Rotation|Rotation]] and shear are both linear transformations, meaning that they can be represented by matrices and can be composed together to form more complex transformations.
+Note that rotation and shear are both linear transformations, meaning that they can be represented by matrices and can be composed together to form more complex transformations.

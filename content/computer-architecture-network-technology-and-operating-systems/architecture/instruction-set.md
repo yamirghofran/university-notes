@@ -7,7 +7,7 @@ title: Instruction Set
 - Small number of instructions that perform simple operations.
 - Easy to memorize all the instructions, but a simple task requires many of them.
 - The instructions are executed very quickly
-- It is an architecture oriented towards parallelism ([[Y2Q2/Computer Architecture, Network Technology, and Operating Systems/Architecture/Pipeline|pipelining]]) and superscalarity.
+- It is an architecture oriented towards parallelism ([pipelining](/computer-architecture-network-technology-and-operating-systems/architecture/pipeline)) and superscalarity.
 - e.g. PowerPc, ARM, AVR, PIC
 
 ## CISC

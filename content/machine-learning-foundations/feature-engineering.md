@@ -3,13 +3,13 @@ title: Feature Engineering
 ---
 
 Transforming raw data into tidy data ([Raw and Tidy Data](/machine-learning-foundations/raw-and-tidy-data)), i.e. into a [feature vector](/machine-learning-foundations/feature-vector).
-Fundamental part of ML Engineering. 
+Fundamental part of ML Engineering.
 
 Algorithm-specific formatting of feature vectors. e.g. transforming categorical attributes into numerical features with certain [properties](/machine-learning-foundations/properties-of-good-features) .
 
 Feature engineering is a process of first conceptually and then programmatically transforming a raw example into a [Feature Vector](/machine-learning-foundations/feature-vector). It consists of conceptualizing a feature and then writing the programming code that would transform the entire raw example, with potentially some help of some indirect data, into a feature.
 
-For feature engineering with text, you can use feature engineering techniques like [One-Hot Encoding](/machine-learning-foundations/one-hot-encoding) and [[Y2Q2/Machine Learning Foundations/Bag of Words|Bag of Words]].
+For feature engineering with text, you can use feature engineering techniques like [One-Hot Encoding](/machine-learning-foundations/one-hot-encoding) and [bag of words](/machine-learning-foundations/bag-of-words).
 
 There are other **encoding** techniques as well:
 - [Mean Encoding](/machine-learning-foundations/mean-encoding)

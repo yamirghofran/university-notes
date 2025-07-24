@@ -27,7 +27,7 @@ title: Gradient Boosting Machines
 - Regression
 	- [MSE](/machine-learning-foundations/mean-squared-error)
 	- [MAE](/machine-learning-foundations/mean-absolute-error)
-	- [[Y2Q2/Machine Learning Foundations/R-squared|R-squared]]
+	- [supervised learning](/machine-learning-foundations/r-squared)
 ## Advantages
 - High predictive accuracy
 - Handles non-linear relationships

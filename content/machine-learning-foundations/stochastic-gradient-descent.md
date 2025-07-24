@@ -15,7 +15,7 @@ Optimization algorithm used to minimize a [loss function](/machine-learning-foun
 - Regressor
 	- [MSE](/machine-learning-foundations/mean-squared-error)
 	- [MAE](/machine-learning-foundations/mean-absolute-error)
-	- [[Y2Q2/Machine Learning Foundations/R-squared|R-squared]]
+	- [R Squared](/machine-learning-foundations/r-squared)
 - Classifier
 	- [Accuracy](/machine-learning-foundations/accuracy)
 	- [Precision](/machine-learning-foundations/precision)
