@@ -1,0 +1,90 @@
+---
+title: Glossary
+weight: 1
+---
+
+- **High-performance Computing (HPC)**:  HPC is the technique of combining computing resources in order to tackle complex issues in research, engineering, or business at substantially greater performance than a normal desktop computer or workstation.
+- **Computer Architecture**:  A collection of principles and procedures that specify the functioning, structure, and implementation of computer systems is known as computer architecture.
+- **ISA**:  ISA stands for “Instruction set architecture”. It is a computing paradigm that is abstract. It is also known as architecture or computer architecture.
+- **Parallelism**:  Parallelism is essentially the simultaneous execution of several processes.
+- **GHz**:  GHz stands for “Gigahertz”. It is commonly used to measure computer processing speeds.
+- **DRAM**:  DRAM is an abbreviation for Dynamic Random Access Memory. DRAM is one of the various forms of semiconductor memory that is commonly utilized to store data or program code that a computer processor needs to function.
+- **SRAM**:  Static Random Access Memory (SRAM) is an acronym for it SRAM is a type of random-access memory (RAM) that uses latching circuitry to hold every bit.
+- **NVRAM**:  The expansion of the NVRAM acronym is “Non-volatile random-access memory”. The content is retained even when there is no electricity in NVRAM.
+- **Cache**:  A cache is a dedicated storage area that collects temporary data to speed up the loading of websites, browsers, and apps.
+- **Bandwidth**:  The maximum rate of data flow via a particular route is defined as bandwidth.
+- **Latency**:  Latency is a unit of measurement for the delay. Latency in a network is the amount of time it takes for data to travel across the network.
+- **NRE**:  NRE stands for “Nonrecurring Engineering”. It is an abbreviation for Non-Recurring Engineering. The phrase refers to any one-time expenses incurred during the production process.
+- **Boltzmann constant**:  The Boltzmann constant (kB or k) is defined as the proportionality factor that connects the average relative kinetic energy of particles in a gas to the gas's thermodynamic temperature.
+- **Data path**:  A data path is a path that helps in transferring data and in the processing of various types of data, such as arithmetic logic units or multipliers, as well as registers
+- **Control path**:  A control path is a path taken by SCSI Medium Changer commands delivered by a server to control a particular logical library.
+- **Efficiency, floating-point efficiency**:  Efficiency denotes a peak level of performance that employs the fewest number of inputs to produce the greatest quantity of output.
+- **Hardware fault**:  A fault in a computer system's electrical circuitry or electromechanical components (discs, tapes). Recovering from a hardware failure necessitates the repair or replacement of the faulty component.
+- **Software fault**:  A software fault, also known as a flaw, occurs when the predicted and actual outcomes do not match. A mistake, defect, failure, or fault in a computer program is another example.
+- **Hard fault, soft fault**:  Hard Fault refers to any types of defects that cannot be handled by any of the other exception methods. A soft fault in an Adaptive Server is an inconsistency that is typically not permanent.
+- **Cosmic ray**:  Cosmic rays are a type of high-energy radiation that comes from beyond our solar system. When the rays reach Earth, they hit with particles in the upper atmosphere, creating a "shower" of particles that includes muo52ns.
+- **Checkpoint/restart**:  A checkpoint restart implies that if a file transmission is interrupted due to an Internet connection or computer failure, it will immediately resume where it left off when the system is reconnected, rather than having to start over.
+- **Programmability**:  It is the capacity of hardware and software to change; the ability to receive a new set of instructions that alters its behavior.
+- **SLOC**:  SLOC stands for “Source lines of code”. It is a software statistic that counts the number of lines in the text of a computer program's source code to determine the size of the program.
+- **Programming model**:  A programming model is a programming paradigm in which execution is triggered by what appear to be library calls.
+- **Productivity**:  Productivity is typically described as the ratio of output volume to input volume.
+- **Software engineering**:  It is a field of engineering concerned with the creation of software products.
+- **Workflow management**:  Workflow management is the coordination of tasks that comprise an organization's work. It may also comprise the integration of IT systems in order to transfer data across processes and other IT systems inside an organization.
+- **Flynn’s taxonomy, Michael Flynn**:  Michael J. Flynn developed his taxonomy in 1966. It is a computer architecture categorization system that was extended in 1972. Flynn's taxonomy is a system that is used for categorizing the architecture of a parallel computer.
+- **SISD**:  SISD is an acronym that stands for "Single Instruction and Single Data Stream."It is a single-processor system that can only process one instruction at a time.
+- **SIMD**:  SIMD is an acronym that stands for “Single Instruction and Multiple Data Stream”. It represents an organization made up of numerous processing units that are directed by a control system. The control unit gives the same instruction to every processor, although they handle different sorts of data.
+- **MIMD**:  MIMD is an acronym that stands for “Multiple Instruction and Multiple Data Stream”. Every MIMD's processors have their own software, which creates an instruction stream.
+- **MISD**:  MISD stands for “multiple instructions, single data”. It is a parallel computing architecture in which several functional units execute various tasks.
+- **SPMD**:  SPMD stands for “Single Program Multiple Data”. Message passing programming on distributed memory computer systems is commonly referred to as SPMD.
+- **GPU Accelerator**:  GPU accelerator is the device that uses a graphics processing unit in conjunction with a computer processing unit to speed computationally intensive activities such as deep learning, analytics, and engineering applications.
+- **Abacus**:  a basic calculating device consisting of a frame with rows of wires or grooves through which beads are moved.
+- **Harvard architecture**:  It is a computer design with unique commands and storing data and signal pathways.
+- **Chip**:  Microchips are highly complex though tiny devices which contain computer memory or provide logic circuitry to microprocessors.
+- **Mainframe**:  Mainframes are high-performance computers with massive quantities of memory and processors capable of processing billions of basic computations and transactions in real-time.
+- **Minicomputer**:  Minicomputers are smaller, less expensive, and less powerful than a mainframe or supercomputer, yet more expensive and powerful than a home computer.
+- **Vector processor**:  A vector processor is also defined as an array processor, is a processing unit that executes a set of instructions based on one-dimensional data arrays known as vectors.
+- **SIMD array**:  This is a computer with many parallel processing units. Although both types of array processors manipulate vectors, their underlying organization differs.
+- **CMOS**:  CMOS stands for “Complementary Metal Oxide Semiconductor”. A microprocessor socket connects a microprocessor processor to the motherboard of a personal computer through a set of pins.
+- **SMP**:  SMP stands for “Symmetric multiprocessing”. It is a multiprocessor computer hardware and software design that combines multiple similar processors to a common shared main memory.
+- **MPP**:  MPP stands for “massively parallel processing”. An MPP Database is a storage structure that allows numerous processing units to handle several tasks at the same time.
+- **Vacuum tube**:  A vacuum tube, sometimes known as a valve in British English, is an electrical device used to control electric current flow in many older radios, television sets, and amplifiers.
+- **Discrete transistor**:  Discrete transistors are utilized in a wide range of applications ranging from low to high power. Initially, transistors were always discrete, but they were later incorporated into integrated circuits.
+- **Integrated transistor**:  Integrated transistors are miniaturized active devices which are embedded in the integrated circuits.
+- **Logic gate**:  A logic gate is an idealistic model of computing that serves as a foundation for electronic systems. It carries out basic logical tasks necessary in digital circuitry. Logic gates are widely used in a number of electrical gadgets we use today.
+- **Circuit**:  A circuit is a closed channel through which electricity may flow from one point to another.
+- **Switching rate**:  The speed with which an electric logic device can change the logic state over its output in reaction to variations in its input is called the switching rate. This is produced by the device's lag that is produced by the device's technology.
+- **Propagation delay**:  The time taken by packages to travel through the transmission channel is described as propagation delay and is limited by the speed of light.
+- **Mercury tank**:  Mercury tank stores the number of bits. These bits are determined by the maximum pulse repetition frequency, the length of the tank, and the medium's propagation delay.
+- **One-dimensional memory**:  A dynamic memory in which information must be updated on a regular basis. Because of the serial structure of the bit availability, it was sometimes referred to as a "one-dimensional memory."
+- **Two-dimensional memory**:  In the mid-1940s, a two-dimensional memory was also developed. it stored electrostatic charges on a phosphorous screen within a vacuum tube, similar to the old-fashioned video tubes used in televisions and oscilloscopes.
+- **Core memory**:  The memory used magnetic rings known as cores with wires flowing through them to select and detect the contents of the cores.
+- **Punched Card**:  A punched card is a stiff sheet of paper that contains digital data represented by the presence or absence of holes in predetermined places.
+- **Paper tape**:  Paper tape is a slower, limited linear data storage media that was widely employed in early computing and communication equipment.
+- **Cycle time**:  Cycle time is the time, generally measured in nanoseconds, that elapses between the start of one random access memory (RAM) access and the start of the next.
+- **Volatile**:  Volatile memory is computer memory that requires electricity to preserve the recorded information.
+- **Destructive read**:  A read procedure that modifies the data of the requested memory location and should be followed immediately by a rewrite action to maintain the data.
+- **Register**:  Registers are a form of computer memory that is used to swiftly take, store, and transmit data and instructions that are instantly needed by the CPU.
+- **Accumulator**:  An accumulator is a type of register that is used to store various types of values and operands used in arithmetic operations.
+- **PE**:  PE stands for “Pre-installation Environment”
+- **Interconnection network**:  Switching elements make up interconnection networks. The pattern used to link individual switches to other elements such as processors, memory, and other switches is known as topology.
+- **I/O Channel**:  In computing equipment, the input/output channel is a communication line. The input/output channel connects the input/output bus and memory to the CPU or a computer peripheral.
+- **Amdahl’s Law**:  According to Amdahl's Law, the greatest speedup S(N) that can be obtained with N processors is:
+- Where, P denotes the proportion of a system or program that can be parallelized, while 1-P denotes the proportion that cannot.
+$$
+S(N) = \frac{1}{(1 - P) + \left(\frac{P}{N}\right)}
+$$
+- **Shared-memory multiprocessor**:  A shared-memory multiprocessor is a computer system that is made up of many independent processors that each execute a distinct instruction stream.
+- **Cache coherence**:  Cache coherence refers to the consistency of commonly accessed resource data that resulted in being stored in multiple local caches.
+- **MESI protocol**:  The MESI protocol is a formal framework for snooping-based cache coherency management.
+- **Snooping cache**:  Cache snooping is the process of continually probing the victim's cache to learn about the victim's queries.
+- **SMP**:  SMP stands for “Symmetric multiprocessing”. It is a multiprocessor hardware and software design wherein multiple identical processors are connected to a common, combined main memory, have complete access to every peripheral device, and are administered by a single operating system.
+- **UMA**:  UMA stands for “Uniform memory access”. It is a shared memory architecture that is utilized in parallel computers.
+- **NUMA**:  NUMA is an acronym that stands for "non-uniform memory access." It is a multiprocessor computer memory design wherein data transfer speed is defined by memory location.
+- **SAN**:  SAN is an abbreviation for "storage area network." It is a storage device network that can be accessed by numerous servers or PCs, giving a pool of shared storage capacity.
+- **COTS**:  COTS stands for “commercial off-the-shelf”. A commercial off-the-shelf (COTS) product is one that is utilized "as-is." COTS solutions are intended to be readily installed and to work in conjunction with existing system components.
+- **ATM**:  ATM stands for “asynchronous transfer mode”. The ATM protocol architecture is intended to facilitate data transfer while providing a variety of quality-of-service assurances.
+- **Myrinet**:  Myrinet is a system for high-speed local area networking. It is physically made up of two fiber optic cables, one upstream and one downstream, which are linked to the host computers through a single connection.
+- **Gigabit Ethernet**:  Gigabit Ethernet is a communication standard that is used in local networks and therefore is focused upon Ethernet frame structure and interface.
+- **Infiniband**:  Infiniband is a high-performance computing networking communications technology with extremely high throughput and low latency.
+- **Heterogeneous system architecture**:  The abbreviation used for it is HAS which is a set of cross-vendor standards which allow for the combination of central processing units and visuals.
+- **Microprocessor socket**:  A microprocessor socket connects a microprocessor to the PC's motherboard through a set of pins.
