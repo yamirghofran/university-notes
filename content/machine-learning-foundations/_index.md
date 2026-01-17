@@ -1,7 +1,7 @@
 ---
 title: Machine Learning Foundations
 menuTitle: ML
-noToc: true
+noToc: false
 weight: 4
 ---
 
