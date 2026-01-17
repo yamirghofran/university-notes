@@ -4,7 +4,34 @@ title: A* Search
 
 https://www.youtube.com/watch?v=ySN5Wnu88nE&t=1s
 
-A* works like [Dijkstra](/reasoning-and-problem-solving/algorithms/dijkstra)’s but adds a **heuristic function** that estimates how close a node is to the goal. This makes it more efficient by guiding the search in the right direction.
+- f(n) = g(n) + h(n)
+	- g(n) is the path cost from the initial state
+- Complete
+- Cost-optimal if:
+	- Heuristic is **admissible** (never overestimates cost)
+	- Heuristic is **consistent** h(n) ⇐ c(n,a,n') + h(n')
+A* works like [Uniform Cost Search (Dijkstra)](/reasoning-and-problem-solving/algorithms/uniform-cost-search-dijkstra)’s but adds a **heuristic function** that estimates how close a node is to the goal. This makes it more efficient by guiding the search in the right direction.
+
+```
+function A*-SEARCH(problem) returns a solution, or failure
+	if problem's initial state is a goal then return empty path to initial state
+	frontier ← a priority queue initially containing one path, for the problem's initial state
+	reached ← a set of states; initially empty
+	solution ← failure
+	while frontier is not empty do
+		parent ← the lowest-f-cost node in frontier
+		for child in successors(parent) do
+			s ← child.state
+			if s is a goal then
+				return child
+			if s is not in reached then
+				add s to reached
+				add child to frontier with priority child.f-cost
+			else if child.f-cost < reached[s].f-cost then
+				update reached[s] with child
+				update child's priority in frontier to child.f-cost
+	return solution
+```
 
 ```python
 import heapq

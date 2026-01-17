@@ -5,6 +5,7 @@ weight: 4
 
 Keeps track (i.e. **a model**) of the part of the world it can't see.
 Requires some internal state that depends on percept history.
+
 **Transition model**: Knowledge of how the world changes based on the agent actions or external events.
 **Sensor model**: knowledge about how the sensors reflect the world.
 

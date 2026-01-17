@@ -19,6 +19,7 @@ Environment includes everything that affect the agent that is not under their co
 ### Partially observable
 - Noise, inaccurate or missing data
 - e.g. Card game agent
+- [Search in Partially Observable Environments](/reasoning-and-problem-solving/search-in-partially-observable-environments)
 ### Unobservable
 - Agent has no sensors at all
 
@@ -63,8 +64,9 @@ If the environment does not change but performance does (e.g. can't take too lon
 ## Discrete vs Continuous
 - Refers to the number of uniquely distinct states
 - Can apply to time, state or both
-- In some cases, if there are too many distinct states across a spectrum, the problem can be treated as continous
+- In some cases, if there are too many distinct states across a spectrum, the problem can be treated as continuous
 
 ## Known vs Unknown
-In unknown environments, there is no previous knowledge
+In unknown environments, there is no previous knowledge.
+
 Agent will need to learn the rules of the environment (i.e. the consequences of their actions, and how they change the state)

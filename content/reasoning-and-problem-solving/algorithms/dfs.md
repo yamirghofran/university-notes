@@ -2,6 +2,26 @@
 title: DFS
 ---
 
+- Depth-first Search is not [cost-optimal](/reasoning-and-problem-solving/performance)
+	- instead, it will return the first solution it finds.
+- Complete, and efficient only for finite state spaces that are trees
+- Complete (but not efficient) for acyclic state spaces
+- Incomplete for
+	- cycle state spaces (but could check for loops)
+	- infinite state spaces
+Backtracking-search is a variation
+- Need to be able to "undo" the action
+- Requires only $O(m)$ memory, and can efficiently check cycle
+## When to use DFS
+- Tree-like search where it needs less memory than [[Y3Q1/Reasoning and Problem Solving/Algorithms/BFS|BFS]]
+
+## Time and Space Complexity
+For a finite tree:
+- Time complexity = number of states
+- Space complexity is $O(bm)$
+	- b = branching factor
+	- m = max depth
+
 DFS works differently from [BFS](/reasoning-and-problem-solving/algorithms/bfs). Instead of moving level by level, it follows one path as far as it can go before **backtracking**. Think of it as diving deep down a trail, then returning to explore the others.
 
 We can implement DFS in two ways:

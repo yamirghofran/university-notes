@@ -16,9 +16,9 @@ function TABLE-DRIVEN-AGENT(percept) returns an action
 	persistent: percepts, a sequence, initially empty
 		table, a table of actions, indexed by percept sequences, initially fully specified
 
-append percept to the end of percepts
-action ← LOOKUP(percepts, table)
-return action
+	append percept to the end of percepts
+	action ← LOOKUP(percepts, table)
+	return action
 ```
 
 Table-driven approach does not work in practice:
@@ -29,8 +29,8 @@ E.g. for chess, there would be $10^{123}$ entries. For go, that number is $10^{3
 ![](../attachments/cleanshot-2025-09-10-at-1344002x.png)
 
 **Key challenge**: Write minimal programs that, to the extent possible, produce rational behavior
-
 ## Vacuum Agent Example
+[Vacuum Problem](/reasoning-and-problem-solving/vacuum-problem)
 sensors: current position, dirtiness
 actions: suck, right, left
 

@@ -1,0 +1,4 @@
+---
+title: Sliding Tile Puzzle
+---
+

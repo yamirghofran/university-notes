@@ -3,7 +3,7 @@ title: Utility-based Agents
 weight: 4
 ---
 
-In a probabilistic (i.e. real) world, the agent will maximise **expected** utility
+In a probabilistic (i.e. real) world, the agent will maximize **expected** utility
 Even if the utility function is not explicit, any agent that has a rational behavior must
 behave as if it had one.
 ![](../attachments/cleanshot-2025-09-13-at-1305232x.png)

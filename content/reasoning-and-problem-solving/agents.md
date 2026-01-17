@@ -3,9 +3,9 @@ title: Agents
 weight: 2
 ---
 
-For each possible **percept sequence**, a **RATIONAL AGENT** should select an action that is expected to maximize its **performance measure**, given the evidence provided by the percept sequence and whatever **built-in knowledge** the agent has.
+For each possible **percept sequence**, a **RATIONAL AGENT** should select an action that is expected to maximize its **[Performance](/reasoning-and-problem-solving/performance) measure**, given the evidence provided by the percept sequence and whatever **built-in [knowledge](/reasoning-and-problem-solving/knowledge-representation)** the agent has.
 
-- Perceives environment
+- Perceives [environment](/reasoning-and-problem-solving/environments)
 - through sensors
 - acting upon it through actuators
 
@@ -17,7 +17,9 @@ Sensors produce **percepts**, creating a **percept sequence**.
 - [Model-based reflex agents](/reasoning-and-problem-solving/model-based-reflex-agents)
 - [Goal-based agents](/reasoning-and-problem-solving/goal-based-agents)
 - [Learning agents](/reasoning-and-problem-solving/learning-agents)
-- Utility-based agents
+- [Utility-based Agents](/reasoning-and-problem-solving/utility-based-agents)
+These are generalizations. Real agents might have characteristics of several.
+Any type of agent can either be static or a learning agent.
 ## Sensors and Actuators
 - Human
 	- Sensors: eyes, ears, etc.
@@ -25,7 +27,6 @@ Sensors produce **percepts**, creating a **percept sequence**.
 - Software agent
 	- Sensors: file contents, typed input, etc.
 	- Actuators: writing files, playing sounds, etc.
-
 ## Agent Function
 **Agent function**, mathematical map of inputs to outputs:
 - Inputs
