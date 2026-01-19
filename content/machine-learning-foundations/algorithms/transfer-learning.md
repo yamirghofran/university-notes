@@ -30,5 +30,5 @@ title: Transfer Learning
 - How many layers of the pretrained model to use or freeze in the new model?
 - This is up to the analyst: it's part of the decisions we will make about the architecture that will work best for our problem.
 
-![](../attachments/cleanshot-2025-04-20-at-2346352x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-04-20-at-2346352x.png)
 

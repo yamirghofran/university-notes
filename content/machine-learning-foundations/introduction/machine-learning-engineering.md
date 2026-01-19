@@ -34,4 +34,4 @@ Given a customer with a set of requirements understand whether and how a specifi
 - What engineering process will be needed?
 - How much will it cost to maintain? [ML Cost](/machine-learning-foundations/introduction/ml-cost)
 
-![](../attachments/cleanshot-2025-01-12-at-1021362x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-12-at-1021362x.png)

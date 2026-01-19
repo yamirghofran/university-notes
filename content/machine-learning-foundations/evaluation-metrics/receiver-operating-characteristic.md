@@ -3,7 +3,7 @@ title: Receiver Operating Characteristic
 ---
 
 The ROC (Receiver Operating Characteristic) curve is a graphical representation used to evaluate the performance of a **binary classification** model. It can only be used with classifiers that return a score (or a probability) of prediction. 
-![](../attachments/pasted-image-20250204123842.png)
+![](/machine-learning-foundations/attachments/pasted-image-20250204123842.png)
 
 - **True Positive Rate (TPR) or Sensitivity (Y-axis)**: This is the proportion of actual positive cases that are correctly identified by the model. It is calculated as: $$\text{TPR} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}$$
 - **False Positive Rate (FPR) (X-axis)**: This is the proportion of actual negative cases that are incorrectly identified as positive by the model. It is calculated as: $$\text{FPR} = \frac{\text{False Positives}}{\text{False Positives} + \text{True Negatives}}$$

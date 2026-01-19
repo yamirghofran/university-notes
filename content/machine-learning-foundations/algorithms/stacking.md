@@ -11,7 +11,7 @@ title: Stacking
 	- Majority vote: for classification. Returning the majority class among all models' predictions about input $x$.
 	- **Model stacking**: trains a strong model by inputting the outputs of other strong models.
 
-![](../attachments/cleanshot-2025-05-04-at-1246502x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-05-04-at-1246502x.png)
 - Combine classifiers $f_{1}, f_{2}$, and $f_{3}$, to train a metamodel
 - All f predict the same set of classes.
 - Create a synthetic dataset from the predictions of $\mathrm{f}_{1-3}$.

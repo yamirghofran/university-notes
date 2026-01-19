@@ -28,8 +28,8 @@ For [Neural Network](/machine-learning-foundations/deep-learning/neural-networks
 - We read the input image using N convolution layers.
 - The encoder's last layer is the image embedding.
 - We add two subnetworks on top of the embedding layer, each taking the embedding vector as input and predicting the coordinates of the object, and the tag
-![](../attachments/image0-1.jpg)
-![](../attachments/image1-1.jpg)
+![](/machine-learning-foundations/attachments/image0-1.jpg)
+![](/machine-learning-foundations/attachments/image1-1.jpg)
 Multimodal Neural Network architecture.
 
 First subnetwork (coordinates):

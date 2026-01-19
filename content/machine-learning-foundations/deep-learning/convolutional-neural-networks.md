@@ -11,7 +11,7 @@ title: Convolutional Neural Networks
 - **Learning**: uses gradient descent, backpropagation, and filters (called kernels) to extract spatial patterns.
 - **Pros**: great for images, less parameters than FNNs, translationally invariant.
 - **Cons**: large labeled datasets, computationally expensive, no temporal awareness.
-![](../attachments/cleanshot-2025-03-02-at-2242172x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-02-at-2242172x.png)
  - LeNet-5: one of the earliest CNNs that promoted deep learning.
 - Uses convolutional and pooling layers to extract features.
 - Ends with fully connected layers for classification.

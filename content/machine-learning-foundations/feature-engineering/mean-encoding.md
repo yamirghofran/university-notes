@@ -12,7 +12,7 @@ The advantage of this technique is that the data dimensionality doesn't increase
 If you work on a **binary classification problem**, in addition to sample mean, you can use other useful quantities: the raw counts of the positive class for a given value of z, the **odds ratio**, and the **log-odds ratio**. 
 
 ### Integer to sine-cosine transformation for cyclical features, e.g. **week days**
-![](../attachments/cleanshot-2025-01-23-at-1946102x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-23-at-1946102x.png)
 
 $$
 p_{\sin} = \sin\left(\frac{2 \times \pi \times p}{\max(p)}\right), \quad p_{\cos} = \cos\left(\frac{2 \times \pi \times p}{\max(p)}\right)

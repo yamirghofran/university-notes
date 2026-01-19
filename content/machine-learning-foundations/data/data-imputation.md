@@ -10,7 +10,7 @@ $$
 \hat{x}^{(j)} \leftarrow \frac{1}{N(j)} \sum_{i \in S(j)} x_i^{(j)},
 $$
 
-![](../attachments/cleanshot-2025-01-14-at-0958242x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-14-at-0958242x.png)
 
 ## Replacing with Value Outside the Normal Range
 For example, if the regular range is [0,1], you can set the missing value to 2 or -1.

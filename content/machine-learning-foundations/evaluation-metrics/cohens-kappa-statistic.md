@@ -19,7 +19,7 @@ where:
 - $p_e$ is the expected agreement by chance.
 ## Components of the Formula
 To calculate Cohen's Kappa statistic, we need to calculate the observed agreement ($p_o$) and the expected agreement by chance ($p_e$).
-![](../attachments/cleanshot-2025-02-22-at-1538552x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-22-at-1538552x.png)
 ### Observed Agreement:
 $$
 p_o \overset{\text{def}}{=} \frac{a + d}{a + b + c + d}.

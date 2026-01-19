@@ -5,7 +5,7 @@ title: Logistic Regression
 Predicts probabilities for a binary target variable → Binary #ml/classification 
 ## How it works
 Uses a logistic function to map outputs to probabilities.
-![](../attachments/cleanshot-2025-01-29-at-1430192x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-29-at-1430192x.png)
 ## Evaluation
 - [Accuracy](/machine-learning-foundations/evaluation-metrics/accuracy)
 - [Precision](/machine-learning-foundations/evaluation-metrics/precision) and [Recall](/machine-learning-foundations/evaluation-metrics/recall)
@@ -17,4 +17,4 @@ Uses a logistic function to map outputs to probabilities.
 - Limited to linear decision boundaries
 
 ## Real-Life Example
-![](../attachments/cleanshot-2025-01-29-at-1442352x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-29-at-1442352x.png)

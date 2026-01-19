@@ -75,24 +75,24 @@ Multiple models/algorithms satisfy these requirements.
 
 ## Using Pretrained Model Directly and with Finetuning
 ### Directly
-![](../attachments/cleanshot-2025-03-26-at-2024092x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-26-at-2024092x.png)
 - We don't modify layers or weights
 - We don't train anything.
 - We just use the model for inference (i.e. predictions)
 ### Finetuning
-![](../attachments/cleanshot-2025-03-26-at-2024172x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-26-at-2024172x.png)
 - The model starts with pretrained weights.
 - We train the model further on our own dataset (i.e. adjusting weights)
 - This improves accuracy on our specific data.
 
-![](../attachments/cleanshot-2025-03-26-at-2027132x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-26-at-2027132x.png)
 - Pretrained with finetuning
 - Adapt the pretrained model to our specific task by training on our own dataset.
 - Keep most pretrained weights, adjusting only the final layers to specialize the model.
 - Example of finetuning BERT for text classification.
 
 ### Using Pretrained Weights or Embeddings
-![](../attachments/cleanshot-2025-03-26-at-2028332x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-26-at-2028332x.png)
 - We only reuse the learned parameters, i.e. weights and biases.
 - Our model may have new layers or different structure.
 - We might use just part of the pretrained model (e.g. BERT encoder only)

@@ -12,4 +12,4 @@ title: Class Weighting
 - The examples of genuine transactions are much more frequent.
 - If the misclassification cost is the same for both classes, the "fraudulent" examples, in the minority, risk being misclassified to allow classifying more of the majority class correctly.
 - Solution: we use SVM with soft margin, defining a cost for misclassified examples.
-![](../attachments/cleanshot-2025-05-04-at-1356402x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-05-04-at-1356402x.png)

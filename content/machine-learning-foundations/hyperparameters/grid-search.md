@@ -6,7 +6,7 @@ Simplest [Hypterparameter Tuning](/machine-learning-foundations/hyperparameters/
 
 It discretizes and then evaluates each pair of hyperparameters.
 
-![](../attachments/cleanshot-2025-02-22-at-1109162x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-22-at-1109162x.png)
 
 ## Evaluation Criteria
 - Configuring a pipeline with a pair of hyperparameter values.
@@ -16,7 +16,7 @@ It discretizes and then evaluates each pair of hyperparameters.
 We train the final model with the best pair of hyperparameter values.
 
 ## Example Pipeline
-![](../attachments/cleanshot-2025-02-22-at-1109442x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-22-at-1109442x.png)
 - We try pair value combinations of `PCA n_components[2,5,10]` and `SVM C[0.1,10,100]`
 - Guarantees to find the best combination of values.
 - Combinatorial explosion for large datasets.

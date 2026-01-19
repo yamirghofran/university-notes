@@ -37,7 +37,7 @@ Parallelized [Neural Network](/machine-learning-foundations/deep-learning/neural
 - Self-attention computes relationships between words.
 - Stacked layers (Nx times) build deep representations.
 - Self-attention replaces recurrence.
-![](../attachments/image0.jpg)
+![](/machine-learning-foundations/attachments/image0.jpg)
 
 ## Encoder
 - Left side: encoder processes the input sequence.
@@ -49,12 +49,12 @@ Parallelized [Neural Network](/machine-learning-foundations/deep-learning/neural
 - Multi-Head Self-Attention: each word attends to all other words in the sequence; one head per relation type
 - Add & Norm: residual connection (Add) helps gradient flow; Layer normalization (Norm) stabilizes training.
 - FFWN: concurrently applies transformations to words.
-![](../attachments/cleanshot-2025-04-05-at-1138462x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-04-05-at-1138462x.png)
 
 ## Self-Attention
 - Self-Attention: key mechanism that allows Transformers to process input sequences without recurrence.
 - Instead of processing one word at a time (like RNNs),
-![](../attachments/cleanshot-2025-04-05-at-1139562x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-04-05-at-1139562x.png)
 Self-Attention lets each word attend to all other words.
 
 - Each word is transformed into three vectors:
@@ -79,7 +79,7 @@ Self-Attention lets each word attend to all other words.
 	- Words that are more relevant get a higher weight.
 	- The attention mechanism highlights important words while downplaying irrelevant ones. E.g., given "cat", "sat" will be more important than "mat"
 ## Learning Flow
-![](../attachments/cleanshot-2025-04-05-at-1142122x.png)![](../attachments/cleanshot-2025-04-05-at-1142252x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-04-05-at-1142122x.png)![](/machine-learning-foundations/attachments/cleanshot-2025-04-05-at-1142252x.png)
 
 - Encoder encodes the input sentence, i.e., the sentence to translate
 - Decoder decodes the input sentence using the target sentence (i.e., the actual translation) to train the neural networks.
@@ -92,4 +92,4 @@ Self-Attention lets each word attend to all other words.
 - Within each decoding step, computation (self-attention, encoder-decoder attention, FFN) remains parallel.
 - However, sequential dependency across decoding steps prevents full parallelization across the entire output sequence.
 
-![](../attachments/cleanshot-2025-04-05-at-1147082x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-04-05-at-1147082x.png)

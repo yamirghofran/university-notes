@@ -3,7 +3,7 @@ title: Random Forest
 ---
 
 Random Forest is an [ensemble](/machine-learning-foundations/algorithms/ensemble-methods) learning method that combines multiple [Decision Tree](/machine-learning-foundations/algorithms/decision-tree)s to improve [predictive](/machine-learning-foundations/predictive-power) [Accuracy](/machine-learning-foundations/evaluation-metrics/accuracy) and reduce overfitting (combine weak learners). It is one of the most popular and powerful machine learning algorithms, used for both #ml/classification and #ml/regression tasks. The key idea behind random forests is to introduce randomness into the tree-building process to create diverse trees, which are then combined to make more robust predictions.
-![](../attachments/cleanshot-2025-02-01-at-1038092x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-01-at-1038092x.png)
 ## How it works
 1. **Ensemble Learning:**
    - Random forest is a type of **[Bagging](/machine-learning-foundations/algorithms/bagging) (Bootstrap Sampling)** algorithm.

@@ -13,4 +13,4 @@ title: Storing and Documenting Features
    -  Unique value distribution: the more unique values a feature has, the less useful it can be (e.g., ID).
 
 
-![](../attachments/cleanshot-2025-01-23-at-2048092x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-23-at-2048092x.png)

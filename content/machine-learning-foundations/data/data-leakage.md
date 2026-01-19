@@ -3,7 +3,7 @@ title: Data Leakage
 ---
 
 Data leakage, also called **target leakage**, is a problem affecting several stages of the machine learning life-cycle, from data collection to model evaluation.
-![](../attachments/cleanshot-2025-01-15-at-1951402x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-15-at-1951402x.png)
 
 Data leakage in [Supervised Learning](/machine-learning-foundations/introduction/supervised-learning) is the unintentional introduction of information about the target that should not be made available. We call it "**contamination**". Training on contaminated data leads to overly optimistic expectations about the model performance.
 

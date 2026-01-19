@@ -12,7 +12,7 @@ To keep the data manageable, we can use the hashing trick that works as follows.
 2. Then, using a **hash function**, we first convert all values of the categorical attribute (or all tokens in the collection of documents) into a number, and 
 3. then we convert this number to an index of our [Feature Vector](/machine-learning-foundations/feature-engineering/feature-vector).
 
-![](../attachments/cleanshot-2025-01-21-at-1124202x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-21-at-1124202x.png)
 The problem with this technique is **collisions** will cause one feature representing multiple values. This is the tradeoff between speed and quality of learning.
 
 Commonly used hash functions are: **MurmurHash3**, **Jenkins**, **CityHash**, and **MD5**.

@@ -3,7 +3,7 @@ title: Selecting the Learning Algorithm
 weight: 1
 ---
 
-![](../attachments/cleanshot-2025-02-05-at-1346382x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-05-at-1346382x.png)
 - **Explainability**: Do we need to understand/explain how/why an algorithm made a prediction? Opaque: DNN, ensemble models; Transparent: [kNN](/machine-learning-foundations/algorithms/k-nearest-neighbors)], [Linear Regression](/machine-learning-foundations/algorithms/linear-regression), [Decision Tree](/machine-learning-foundations/algorithms/decision-tree) learning.
 - **In-memory vs. out-of-memory**: Can we load all the dataset in the RAM? If not, incremental learning algorithms, i.e., [Naive Bayes](/machine-learning-foundations/algorithms/naive-bayes) and [Neural Network](/machine-learning-foundations/deep-learning/neural-networks) (NN) training algorithms.
 - **Number of records and features**: What is the maximum dataset/feature size/number managed by the algorithm? E.g., [SVM](/machine-learning-foundations/algorithms/support-vector-machines) modest size/number; [Neural Network](/machine-learning-foundations/deep-learning/neural-networks) and [Random Forest](/machine-learning-foundations/algorithms/random-forest)s millions.

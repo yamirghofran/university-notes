@@ -4,7 +4,7 @@ title: Data Augmentation
 
 For some type of data, it's quite easy to get more labeled examples without additional labeling. The strategy is called **data augmentation**, and it's most effective when applied to **images**. It consists of applying simple operations, such as crop or flip, to the original images to obtain new images.
 
-![](../attachments/cleanshot-2025-01-14-at-1028052x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-01-14-at-1028052x.png)
 
 # Data Augmentation for Images
 **Flipping** has to be done only with respect for which the meaning of the image is preserved.

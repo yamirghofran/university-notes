@@ -12,7 +12,7 @@ title: Recurrent Neural Networks
 - Pros: Can handle sequential data, remembers previous inputs, good for time-dependent tasks.
 - Cons: Suffers from vanishing gradients, struggles with long-term dependencies, slow training.
 ## Example Architecture
-![](../attachments/cleanshot-2025-03-02-at-2244002x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-02-at-2244002x.png)
 - RNNs have loops to feed back information from previous steps into the network.
 - RNNs remember prior inputs, ideal for tasks where context is important
 
@@ -21,7 +21,7 @@ title: Recurrent Neural Networks
 - Size of memory (dimensionality of memory vector)
 
 ## RNNs Unrolled
-![](../attachments/cleanshot-2025-03-15-at-1352592x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1352592x.png)
 - Once unrolled, RNNs become chains of repeating units, often called "cells".
 - RNNs take one input at a time and update an internal memory called hidden state.
  $$h_t = f(W_x X_t + W_h h_{t-1} + b)$$
@@ -37,7 +37,7 @@ title: Recurrent Neural Networks
 - `softmax` is one of the activation functions used for the output layer.
 - Note: an RNN can produce an output (i.e. prediction) at each iteration and/or pass the hidden state to the next cycle without an output.
 ## RNN Patterns
-![](../attachments/cleanshot-2025-03-15-at-1358072x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1358072x.png)
 - **Vector to Sequence** (one to many)
 	- e.g. image captioning, input an image and get the caption one word at a time.
 - **Sequence to Vector** (many to one)
@@ -53,7 +53,7 @@ title: Recurrent Neural Networks
 	- "Learning models "
 - FNNs took the whole sentence as a single vector; **RNNs process each word sequentially**.
 - Instead of [Bag of Words](/machine-learning-foundations/feature-engineering/bag-of-words) (which ignores order), we represent each sentence as a sequence of word indices, i.e. each sentence is a sequence of numbers.
-![](../attachments/cleanshot-2025-03-15-at-1406292x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1406292x.png)
 
 - Instead of using BoW, we use **word embeddings**:
 	- Convert each word into a dense vector of real numbers.
@@ -61,7 +61,7 @@ title: Recurrent Neural Networks
 - Each word index is mapped to a pre-trained or trainable embedding vector. This is done using an embedding layer in neural networks.
 - Converted the sentence to an embedding matrix, i.e. sequence of dense vectors:
 	- $[0.5, 0.2, 0.1, 0.8], [0.9, 0.1, 0.7, 0.4], [0.3, 0.8, 0.5, 0.6], [0.6, 0.7, 0.3, 0.9]$
-	![](../attachments/cleanshot-2025-03-15-at-1418512x.png)
+	![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1418512x.png)
 - We pass each element of the sequence to the RNN, one element at each time $t$.
 - The RNN updates the hidden state $h$ at each time $t$, holding the entire sentence into the last hidden variable.
 - Execution processes of "I love machine learning":

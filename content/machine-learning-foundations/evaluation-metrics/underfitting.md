@@ -8,7 +8,7 @@ The model is said to have a **low bias** if it abely predicts the training data 
 - The model is too simple for the data (e.g. linear models often underfit)
 - The features aren't informative enough.
 - You [regularize](/machine-learning-foundations/regularization/regularization) too much.
-![](../attachments/cleanshot-2025-02-08-at-1930332x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-08-at-1930332x.png)
 
 ## Possible Solutions
 - Trying a more complex model

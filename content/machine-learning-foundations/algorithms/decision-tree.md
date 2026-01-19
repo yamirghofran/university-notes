@@ -3,7 +3,7 @@ title: Decision Tree
 ---
 
 The decision tree algorithm is a [supervised](/machine-learning-foundations/introduction/supervised-learning) machine learning method used for both #ml/classification and #ml/regression tasks. It works by recursively splitting the dataset into subsets based on [Feature](/machine-learning-foundations/feature-engineering/feature-vector) values, creating a tree-like structure of decisions. Each internal node represents a decision based on a feature, each branch represents the outcome of that decision, and each leaf node represents a final prediction (class label or continuous value).
-![](../attachments/cleanshot-2025-02-01-at-1038212x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-01-at-1038212x.png)
 ## How it works
 1. **Input Data:**
    - A dataset with labeled examples (for classification) or continuous target values (for regression).

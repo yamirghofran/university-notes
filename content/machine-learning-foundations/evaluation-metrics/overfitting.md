@@ -4,7 +4,7 @@ title: Overfitting
 
 When a model predicts the training data labels very well, but works poorly on the [Holdout Dataset](/machine-learning-foundations/data/training-and-holdout-datasets).
 
-![](../attachments/cleanshot-2025-02-08-at-1932492x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-08-at-1932492x.png)
 
 Another name for overfitting is **high variance**: the model is unduly sensitive to small fluctuations in the training set.
 

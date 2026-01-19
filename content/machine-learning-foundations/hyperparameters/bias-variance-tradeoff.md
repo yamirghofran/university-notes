@@ -10,7 +10,7 @@ The most important factor is **model complexity**.
 
 A sufficiently complex model will learn to memorize all training examples and their labels and, thus, will not make prediction errors when applied to the training data. It will have low bias. However, a model relying on memorization will not be able to correctly predict labels of previously unseen data. It will have high variance.
 
-![](../attachments/cleanshot-2025-02-08-at-1938582x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-02-08-at-1938582x.png)
 
 The "zone of solutions" is where both bias and variance are low. Once in this zone, you can do [Hypterparameter Tuning](/machine-learning-foundations/hyperparameters/hypterparameter-tuning) to reach the needed [Precision-Recall Tradeoff](/machine-learning-foundations/evaluation-metrics/precision-recall-tradeoff), or opimize another [Model Performance Metrics](/machine-learning-foundations/evaluation-metrics/model-performance-metrics) appropriate for your problem.
 

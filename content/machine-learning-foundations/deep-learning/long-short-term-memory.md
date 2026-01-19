@@ -26,7 +26,7 @@ title: Long Short-Term Memory
 	- Input gate $i_t$
 	- Update cell state $C_t$
 	- Output gate $O_t$
-	![](../attachments/cleanshot-2025-03-15-at-1445142x.png)	
+	![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1445142x.png)	
 ## Forget Gate
 - Cell State
 	- the horizontal line running through the top of the diagram.
@@ -41,12 +41,12 @@ title: Long Short-Term Memory
 	-   $W_f$: forget gate weight matrix
 	-   $b_f$: forget gate bias
 	-   $\sigma$: sigmoid activation function
-	![](../attachments/cleanshot-2025-03-15-at-1450122x.png)
+	![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1450122x.png)
 
 ### Forget Gate Example
 
-![](../attachments/cleanshot-2025-03-15-at-1450562x.png)
-![](../attachments/cleanshot-2025-03-15-at-1451062x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1450562x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1451062x.png)
 Forget gate outputs values close to 1 thus most of the previous memory will be kept.
 
 ## Input Gate
@@ -60,10 +60,10 @@ Forget gate outputs values close to 1 thus most of the previous memory will be k
 - Update the old cell state
 	- We multiply the old state by $f_t$, forgetting the amount of details computed by the forget gate.
 	- We add $i_t \cdot \tilde{C}_t$, i.e. the new candidate values, scaled by how much we decided to update each state value.
-	![](../attachments/cleanshot-2025-03-15-at-1456352x.png)
+	![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1456352x.png)
 
  ### Input Gate Example
- ![](../attachments/cleanshot-2025-03-15-at-1457072x.png)
+ ![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1457072x.png)
 
 ## Output Gate
 -   Final step: compute the hidden state $h_t$.
@@ -95,4 +95,4 @@ o_t = \sigma \left(
 \right)
 $$
 ## Output Gate Example
-![](../attachments/cleanshot-2025-03-15-at-1458492x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1458492x.png)

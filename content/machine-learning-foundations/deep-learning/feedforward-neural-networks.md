@@ -16,7 +16,7 @@ title: Feedforward Neural Networks
 - **Learning**: gradient descent + chain of calculus to optimize/compute weight updates
 - **Pros**: simple implementation.
 - **Cons**: not efficient for image, needs large datasets for deep architectures, can suffer from vanishing gradients without careful design.
-![](../attachments/cleanshot-2025-03-02-at-2240252x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-02-at-2240252x.png)
 ## Execution Model
 - Features are encoded, and each [Feature](/machine-learning-foundations/feature-engineering/feature-vector) is mapped to an input neuron ($X_n$)
 - Each feature is mapped into a neuron of the following layer alongside a weight ($W_n$)
@@ -25,7 +25,7 @@ title: Feedforward Neural Networks
 	- **Activation function:** e.g. $f(z)=max(0,z)$
 - This repeats for each neuron of each layer until the output layer outputs prediction $\hat{Y}$.
 - Usually, hidden and output layers have different **activation functions**.
-![](../attachments/cleanshot-2025-03-15-at-1300532x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1300532x.png)
 - After the model outputs $\hat{Y}$, we compare it to the true value $Y$ using a [Loss Function](/machine-learning-foundations/loss-function):
 	- Binary Classification: Binary cross-entropy
 	- Multi-class classification: categorical cross-entropy
@@ -46,7 +46,7 @@ title: Feedforward Neural Networks
 - "Deep learning is very difficult"
 - "Learning architectures is useful"
 - [Bag of Words](/machine-learning-foundations/feature-engineering/bag-of-words) encoder: 3 records, each with 10 features
-- ![](../attachments/cleanshot-2025-03-15-at-1339252x.png)
+- ![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1339252x.png)
 Now that we have encoded the records, we need to map them to the neurons of the input layer to start to train the Neural Network.
 - We use the hyperparameter **batch size** to decide how many records to pass to the NN at each training iteration.
 **Batch Size = 1**
@@ -95,7 +95,7 @@ z_{3,1} & z_{3,2} & z_{3,3} & z_{3,4} \\
 \end{bmatrix}
 $$
 - This is why we need GPUs/TPUs. Matrix multiplications can be efficiently parallelized across thousands of cores (e.g. GTX 4090 has 16384 CUDA cores)
-	![](../attachments/cleanshot-2025-03-15-at-1347372x.png)
+	![](/machine-learning-foundations/attachments/cleanshot-2025-03-15-at-1347372x.png)
 - Batch sizes vary depending on hardware, dataset size, and model type:
 	- CPU: 16-32; GPU: 64-128: Server-grade GPU: 256-1024+; TPU: 512-4096
 
@@ -164,7 +164,7 @@ X_test = scaler.transform(X_test) # Transform test data using same scaler
 - Final training results:
 - Accuracy on Test Set: 0.8667
 - Loss on Test Set: 0.3260
-![](../attachments/cleanshot-2025-04-05-at-1151582x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-04-05-at-1151582x.png)
 
 - Pytorch and Keras offer multiple optimization methods
 - E.g., EarlyStopping implements a callback for the model.fit method.

@@ -9,7 +9,7 @@ title: Neural Networks
 - Neurons are **linked** to one another, and each **input** to a neuron is **adjusted by a weight**, which influences the function calculated by that neuron.
 - Neural Networks propagate the computed values from the input neurons to the output neuron(s), using the weights as intermediate parameters.
 - **Learning occurs by changing the weights connecting the neurons.**
-![](../attachments/cleanshot-2025-03-02-at-2211592x.png)
+![](/machine-learning-foundations/attachments/cleanshot-2025-03-02-at-2211592x.png)
 ## How Neural Networks Learn
 - Training data pairs are fed into the neural network, which uses the input representations to make predictions about the output labels.
 - Training data provide feedback on the correctness of the weights, depending on how well the predicted output matches the annotated output label of the input.
