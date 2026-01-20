@@ -12,6 +12,8 @@ Hello, I'm Yousef. These are the notes I've been taking in my classes at IE, stu
 - [Simulating and Modeling to Understand Change](simulating-and-modeling-to-understand-change)
 
 “Very digestable and fast notes. Great reference especially with how everything is searchable and linked between each other.“ — Diego Oliveros
+"Great notes!! Helps me a lot to study for exams." — Icíar Adeliño
+"Very helpful resource for studying Computer Science. Especially as a reference." — Caterina Barbero
 
 <br>
 
