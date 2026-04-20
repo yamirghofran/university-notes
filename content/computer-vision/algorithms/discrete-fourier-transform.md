@@ -1,4 +1,6 @@
-# Standard Discrete Fourier Transform (DFT)
+---
+title: Discrete Fourier Transform
+---
 
 ## Definition
 
@@ -17,6 +19,7 @@ $$\hat{g}[k,l] = \sum_{m=0}^{M-1} \sum_{n=0}^{N-1} g[m,n] \cdot e^{-i2\pi\left(\
 ## Standard DFT Pseudocode
 
 ### 1D DFT
+
 ```
 Algorithm DFT_1D(signal)
 Input:
@@ -42,6 +45,7 @@ Output:
 ```
 
 ### 2D DFT (for images)
+
 ```
 Algorithm DFT_2D(image)
 Input:
@@ -71,6 +75,7 @@ Output:
 ## Inverse DFT Pseudocode
 
 ### 1D Inverse DFT
+
 ```
 Algorithm IDFT_1D(spectrum)
 Input:
@@ -99,10 +104,10 @@ Output:
 
 ## Complexity Analysis
 
-| Algorithm | Time Complexity |
-|-----------|-----------------|
-| Naive DFT | $O(N^2)$ for 1D, $O(MN(M+N))$ for 2D |
-| FFT | $O(N \log N)$ for 1D, $O(MN \log(MN))$ for 2D |
+| Algorithm | Time Complexity                               |
+| --------- | --------------------------------------------- |
+| Naive DFT | $O(N^2)$ for 1D, $O(MN(M+N))$ for 2D          |
+| FFT       | $O(N \log N)$ for 1D, $O(MN \log(MN))$ for 2D |
 
 ---
 
@@ -142,24 +147,26 @@ Output:
 
 ## Key Properties
 
-| Property | Time Domain | Frequency Domain |
-|----------|-------------|------------------|
-| Linearity | $\alpha g_1 + \beta g_2$ | $\alpha \hat{g}_1 + \beta \hat{g}_2$ |
-| Shifting | $g[n - n_0]$ | $e^{-i2\pi kn_0/N} \cdot \hat{g}[k]$ |
-| Convolution | $g_1 * g_2$ | $\hat{g}_1 \cdot \hat{g}_2$ |
-| Parseval's Theorem | $\sum |g[n]|^2$ | $\frac{1}{N} \sum |\hat{g}[k]|^2$ |
+| Property           | Time Domain              | Frequency Domain                     |
+| ------------------ | ------------------------ | ------------------------------------ | --- | ----------------- | ---------- | --- |
+| Linearity          | $\alpha g_1 + \beta g_2$ | $\alpha \hat{g}_1 + \beta \hat{g}_2$ |
+| Shifting           | $g[n - n_0]$             | $e^{-i2\pi kn_0/N} \cdot \hat{g}[k]$ |
+| Convolution        | $g_1 * g_2$              | $\hat{g}_1 \cdot \hat{g}_2$          |
+| Parseval's Theorem | $\sum                    | g[n]                                 | ^2$ | $\frac{1}{N} \sum | \hat{g}[k] | ^2$ |
 
 ---
 
 ## Frequency Ordering
 
 For $N$ samples, DFT frequencies are:
+
 - Without shift: $[0, \frac{1}{N}, \frac{2}{N}, ..., \frac{N/2}{N}, -\frac{N/2-1}{N}, ..., -\frac{1}{N}]$
 - After fftshift: $[-\frac{N/2}{N}, ..., -\frac{1}{N}, 0, \frac{1}{N}, ..., \frac{N/2-1}{N}]$
 
 ---
 
 ## Practical Implementation (Python/NumPy style)
+
 ```python
 import numpy as np
 

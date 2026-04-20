@@ -1,4 +1,6 @@
-# Hough Transform
+---
+title: Hough Transform
+---
 
 ## Overview
 

@@ -1,9 +1,13 @@
-# Canny Edge Detection
+---
+title: Canny Edge Detection
+---
 
 ## Overview
+
 The Canny edge detector is a multi-stage algorithm that detects edges while minimizing noise and providing good localization.
 
 ## Key Goals
+
 1. **Low error rate**: Detect all edges with minimal false positives
 2. **Good localization**: Edge points should be close to true edges
 3. **Single response**: One response per edge point
@@ -47,30 +51,30 @@ Output:
 7. FOR each pixel (i, j) in image DO:
 8.     IF magnitude[i, j] == 0 THEN:
 9.         CONTINUE
-10.    
+10.
 11.    // Get gradient direction (quantized to 0°, 45°, 90°, 135°)
 12.    angle ← direction[i, j]
-13.    
+13.
 14.    // Determine neighbors to compare based on direction
-15.    IF (angle >= -π/8 AND angle < π/8) OR 
+15.    IF (angle >= -π/8 AND angle < π/8) OR
 16.       (angle >= 7π/8 OR angle < -7π/8) THEN:
 17.        // 0° direction (horizontal edge) - compare left and right
 18.        neighbors ← [magnitude[i, j-1], magnitude[i, j+1]]
-19.    
-20.    ELSE IF (angle >= π/8 AND angle < 3π/8) OR 
+19.
+20.    ELSE IF (angle >= π/8 AND angle < 3π/8) OR
 21.            (angle >= -7π/8 AND angle < -5π/8) THEN:
 22.        // 45° direction - compare diagonal neighbors
 23.        neighbors ← [magnitude[i-1, j+1], magnitude[i+1, j-1]]
-24.    
-25.    ELSE IF (angle >= 3π/8 AND angle < 5π/8) OR 
+24.
+25.    ELSE IF (angle >= 3π/8 AND angle < 5π/8) OR
 26.            (angle >= -5π/8 AND angle < -3π/8) THEN:
 27.        // 90° direction (vertical edge) - compare above and below
 28.        neighbors ← [magnitude[i-1, j], magnitude[i+1, j]]
-29.    
+29.
 30.    ELSE:
 31.        // 135° direction - compare other diagonal neighbors
 32.        neighbors ← [magnitude[i-1, j-1], magnitude[i+1, j+1]]
-33.    
+33.
 34.    // Keep pixel only if it's a local maximum
 35.    IF magnitude[i, j] >= MAX(neighbors) THEN:
 36.        nms[i, j] ← magnitude[i, j]
@@ -99,7 +103,7 @@ Output:
 49. FOR each pixel (i, j) where weak_edges[i, j] == TRUE DO:
 50.     // Check 8-connected neighbors
 51.     neighbors_8 ← GET_8_NEIGHBORS(edge_map, i, j)
-52.     
+52.
 53.     // If any neighbor is a strong edge, keep this weak edge
 54.     IF MAX(neighbors_8) == 255 THEN:
 55.         final_edges[i, j] ← TRUE
@@ -114,11 +118,13 @@ Output:
 ## Sobel Kernels
 
 ### Sobel X (Horizontal edges)
+
 $$
 G_x = \begin{bmatrix} -1 & 0 & 1 \\ -2 & 0 & 2 \\ -1 & 0 & 1 \end{bmatrix}
 $$
 
 ### Sobel Y (Vertical edges)
+
 $$
 G_y = \begin{bmatrix} -1 & -2 & -1 \\ 0 & 0 & 0 \\ 1 & 2 & 1 \end{bmatrix}
 $$
@@ -127,22 +133,22 @@ $$
 
 ## Gradient Quantization for NMS
 
-| Angle Range | Direction | Neighbors to Compare |
-|-------------|-----------|-------------------|
-| $[-\pi/8, \pi/8)$ or $[7\pi/8, -7\pi/8)$ | 0° (horizontal) | Left, Right |
-| $[\pi/8, 3\pi/8)$ or $[-7\pi/8, -5\pi/8)$ | 45° | Top-right, Bottom-left |
-| $[3\pi/8, 5\pi/8)$ or $[-5\pi/8, -3\pi/8)$ | 90° (vertical) | Top, Bottom |
-| $[5\pi/8, 7\pi/8)$ or $[-3\pi/8, -\pi/8)$ | 135° | Top-left, Bottom-right |
+| Angle Range                                | Direction       | Neighbors to Compare   |
+| ------------------------------------------ | --------------- | ---------------------- |
+| $[-\pi/8, \pi/8)$ or $[7\pi/8, -7\pi/8)$   | 0° (horizontal) | Left, Right            |
+| $[\pi/8, 3\pi/8)$ or $[-7\pi/8, -5\pi/8)$  | 45°             | Top-right, Bottom-left |
+| $[3\pi/8, 5\pi/8)$ or $[-5\pi/8, -3\pi/8)$ | 90° (vertical)  | Top, Bottom            |
+| $[5\pi/8, 7\pi/8)$ or $[-3\pi/8, -\pi/8)$  | 135°            | Top-left, Bottom-right |
 
 ---
 
 ## Threshold Selection Guidelines
 
-| Ratio | Use Case |
-|-------|----------|
+| Ratio                               | Use Case                |
+| ----------------------------------- | ----------------------- |
 | $T_{high} : T_{low} = 2:1$ or $3:1$ | Standard recommendation |
-| Higher $T_{high}$ | Fewer edges, less noise |
-| Lower $T_{high}$ | More edges, more noise |
+| Higher $T_{high}$                   | Fewer edges, less noise |
+| Lower $T_{high}$                    | More edges, more noise  |
 
 ---
 
@@ -157,6 +163,7 @@ $$
 ---
 
 ## Python Implementation (OpenCV/skimage)
+
 ```python
 import cv2
 from skimage.feature import canny
@@ -166,7 +173,7 @@ blurred = cv2.GaussianBlur(image, (5, 5), sigma)
 edges_cv = cv2.Canny(blurred, T_low, T_high)
 
 # skimage
-edges = canny(image, sigma=sigma, 
-              low_threshold=T_low/255, 
+edges = canny(image, sigma=sigma,
+              low_threshold=T_low/255,
               high_threshold=T_high/255)
 ```

@@ -1,9 +1,13 @@
-# Harris Corner Detector
+---
+title: Harris Corner Detection
+---
 
 ## Overview
+
 The Harris corner detector identifies corners by analyzing the gradient structure in a local window. A corner is where the gradient changes abruptly in multiple directions.
 
 ## Key Insight
+
 - **Flat region**: Gradients are small in all directions
 - **Edge**: Gradients are large in one direction, small in perpendicular direction
 - **Corner**: Gradients are large in multiple directions
@@ -19,6 +23,7 @@ For each pixel, compute in a local window:
 $$M = \sum_{(x,y) \in W} w(x,y) \begin{bmatrix} I_x^2 & I_x I_y \\ I_x I_y & I_y^2 \end{bmatrix} = \begin{bmatrix} \mu_{20} & \mu_{11} \\ \mu_{11} & \mu_{02} \end{bmatrix}$$
 
 Where:
+
 - $I_x, I_y$ = image gradients in x and y directions
 - $w(x,y)$ = window function (Gaussian weighting)
 - $W$ = local window (typically 3×3 to 7×7)
@@ -27,11 +32,11 @@ Where:
 
 Let $\lambda_1, \lambda_2$ be eigenvalues of $M$ (with $\lambda_1 \geq \lambda_2$):
 
-| Region | $\lambda_1$ | $\lambda_2$ | Response |
-|--------|-------------|-------------|----------|
-| Flat | Small | Small | No corner |
-| Edge | Large | Small | No corner |
-| Corner | Large | Large | Corner detected |
+| Region | $\lambda_1$ | $\lambda_2$ | Response        |
+| ------ | ----------- | ----------- | --------------- |
+| Flat   | Small       | Small       | No corner       |
+| Edge   | Large       | Small       | No corner       |
+| Corner | Large       | Large       | Corner detected |
 
 ---
 
@@ -42,11 +47,13 @@ Instead of explicit eigenvalue computation, use:
 $$R = \det(M) - k \cdot \text{trace}^2(M)$$
 
 Where:
+
 - $\det(M) = \lambda_1 \lambda_2 = \mu_{20}\mu_{02} - \mu_{11}^2$
 - $\text{trace}(M) = \lambda_1 + \lambda_2 = \mu_{20} + \mu_{02}$
 - $k$ = empirical constant (typically 0.04 to 0.06)
 
 **Interpretation**:
+
 - $R > 0$: Corner
 - $R < 0$: Edge
 - $|R|$ small: Flat region
@@ -98,11 +105,11 @@ Output:
 13.     μ_20 ← S_x2[y, x]
 14.     μ_02 ← S_y2[y, x]
 15.     μ_11 ← S_xy[y, x]
-16.     
+16.
 17.     // Determinant and trace
 18.     det_M ← μ_20 × μ_02 - μ_11²
 19.     trace_M ← μ_20 + μ_02
-20.     
+20.
 21.     // Harris response
 22.     R[y, x] ← det_M - k × trace_M²
 23. END FOR
@@ -115,10 +122,10 @@ Output:
 
 26. FOR y = 1 TO rows-2 DO:                    // Avoid boundaries
 27.     FOR x = 1 TO cols-2 DO:
-28.         
+28.
 29.         // Check if above threshold
 30.         IF R[y, x] > threshold THEN:
-31.             
+31.
 32.             // Check if local maximum (3×3 neighborhood)
 33.             neighborhood ← R[y-1:y+2, x-1:x+2]
 34.             IF R[y, x] == MAX(neighborhood) THEN:
@@ -138,7 +145,7 @@ Output:
 
 43. FOR each candidate IN corners DO:
 44.     (cx, cy, response) ← candidate
-45.     
+45.
 46.     // Check distance to already selected corners
 47.     too_close ← FALSE
 48.     FOR each selected IN final_corners DO:
@@ -149,7 +156,7 @@ Output:
 53.             BREAK
 54.         END IF
 55.     END FOR
-56.     
+56.
 57.     IF NOT too_close THEN:
 58.         APPEND(final_corners, candidate)
 59.     END IF
@@ -172,16 +179,17 @@ More accurate but computationally more expensive.
 
 ## Properties
 
-| Property | Status |
-|----------|--------|
-| Rotation invariance | Yes (eigenvalues invariant to rotation) |
-| Scale invariance | No (fixed window size) |
-| Illumination invariance | Partial (gradients are differences) |
-| Noise sensitivity | Yes (requires Gaussian smoothing) |
+| Property                | Status                                  |
+| ----------------------- | --------------------------------------- |
+| Rotation invariance     | Yes (eigenvalues invariant to rotation) |
+| Scale invariance        | No (fixed window size)                  |
+| Illumination invariance | Partial (gradients are differences)     |
+| Noise sensitivity       | Yes (requires Gaussian smoothing)       |
 
 ---
 
 ## Python Implementation
+
 ```python
 import cv2
 import numpy as np
@@ -194,8 +202,8 @@ corner_image = image.copy()
 corner_image[corners > 0.01 * corners.max()] = [0, 0, 255]
 
 # Or using goodFeaturesToTrack (Shi-Tomasi)
-corners = cv2.goodFeaturesToTrack(gray, maxCorners=100, 
-                                  qualityLevel=0.01, 
+corners = cv2.goodFeaturesToTrack(gray, maxCorners=100,
+                                  qualityLevel=0.01,
                                   minDistance=10)
 ```
 
@@ -203,9 +211,9 @@ corners = cv2.goodFeaturesToTrack(gray, maxCorners=100,
 
 ## Comparison: Harris vs. Shi-Tomasi
 
-| Aspect | Harris | Shi-Tomasi |
-|--------|--------|------------|
-| Response | $\det - k \cdot \text{trace}^2$ | $\min(\lambda_1, \lambda_2)$ |
-| Speed | Faster | Slower (needs eigenvalues) |
-| Quality | Good | Better |
-| Parameter | k (empirical) | qualityLevel |
+| Aspect    | Harris                          | Shi-Tomasi                   |
+| --------- | ------------------------------- | ---------------------------- |
+| Response  | $\det - k \cdot \text{trace}^2$ | $\min(\lambda_1, \lambda_2)$ |
+| Speed     | Faster                          | Slower (needs eigenvalues)   |
+| Quality   | Good                            | Better                       |
+| Parameter | k (empirical)                   | qualityLevel                 |

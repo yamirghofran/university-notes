@@ -1,4 +1,6 @@
-# Fourier Transform Operations
+---
+title: Fourier Transform Operations
+---
 
 ## Overview
 

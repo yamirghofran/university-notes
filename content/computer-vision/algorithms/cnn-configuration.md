@@ -1,6 +1,9 @@
-# CNN Configuration
+---
+title: CNN Configuration
+---
 
 ## Overview
+
 Configuring a CNN involves designing the architecture (layers, filters, connections) and setting training hyperparameters.
 
 ---
@@ -8,17 +11,20 @@ Configuring a CNN involves designing the architecture (layers, filters, connecti
 ## CNN Architecture Components
 
 ### 1. Convolutional Layer
+
 ```
 Conv2d(in_channels, out_channels, kernel_size, stride=1, padding=0)
 ```
 
 **Key decisions:**
+
 - **Kernel size**: 3×3 (standard), 5×5, 7×7 (early layers)
 - **Stride**: 1 (preserve size), 2 (downsample)
 - **Padding**: 0 (valid), 1 for 3×3 kernel (same)
 - **Output channels**: Powers of 2 (32, 64, 128, 256, 512)
 
 ### 2. Pooling Layer
+
 ```
 MaxPool2d(kernel_size=2, stride=2)    // Most common
 AvgPool2d(kernel_size=2, stride=2)   // For final layers
@@ -26,11 +32,13 @@ AdaptiveAvgPool2d(output_size=1)     // Global pooling
 ```
 
 ### 3. Activation Function
+
 - **ReLU**: Default choice (fast, no vanishing gradient)
 - **LeakyReLU**: For GANs/deep networks
 - **GELU**: Modern alternative (Vision Transformers)
 
 ### 4. Normalization
+
 - **BatchNorm**: Standard for CNNs
 - **LayerNorm**: Used in Transformers
 
@@ -59,18 +67,18 @@ Output:
 5.         conv_layers ← [(32, 3), (64, 3)]
 6         fc_units ← [128]
 7.         dropout ← 0.3
-8.         
+8.
 9.     CASE "standard":          // Default
 10.        conv_layers ← [(32, 3), (64, 3), (128, 3), (256, 3)]
 11.        fc_units ← [512, 256]
 12.        dropout ← 0.5
-13.        
+13.
 14.    CASE "deep":              // For large datasets
-15.        conv_layers ← [(64, 3), (64, 3), (128, 3), (128, 3), 
+15.        conv_layers ← [(64, 3), (64, 3), (128, 3), (128, 3),
 16.                       (256, 3), (256, 3), (512, 3)]
 17.        fc_units ← [1024, 512, 256]
 18.        dropout ← 0.5
-19.        
+19.
 20.    CASE "resnet":            // ResNet-style
 21.        RETURN ConfigureResNet(input_shape, num_classes)
 
@@ -79,22 +87,22 @@ Output:
 // ============================================
 22. layers ← []
 23. in_channels ← C
-24. 
+24.
 25. FOR (out_channels, kernel_size) IN conv_layers DO:
-26.     
+26.
 27.     // Convolution
-28.     APPEND(layers, Conv2d(in_channels, out_channels, 
+28.     APPEND(layers, Conv2d(in_channels, out_channels,
 29.                           kernel_size, padding=kernel_size//2))
-30.     
+30.
 31.     // Normalization
 32.     APPEND(layers, BatchNorm2d(out_channels))
-33.     
+33.
 34.     // Activation
 35.     APPEND(layers, ReLU())
-36.     
+36.
 37.     // Pooling every 1-2 conv layers
 38.     APPEND(layers, MaxPool2d(kernel_size=2, stride=2))
-39.     
+39.
 40.     in_channels ← out_channels
 41. END FOR
 
@@ -104,7 +112,7 @@ Output:
 42. // Option 1: Global Average Pooling (preferred)
 43. APPEND(layers, AdaptiveAvgPool2d(output_size=1))
 44. flatten_size ← out_channels    // After global pooling
-45. 
+45.
 46. // Option 2: Flatten (alternative)
 47. // flatten_size ← out_channels × (H // 2^num_pooling) × (W // 2^num_pooling)
 
@@ -113,17 +121,17 @@ Output:
 // ============================================
 48. classifier ← []
 49. in_features ← flatten_size
-50. 
+50.
 51. FOR units IN fc_units DO:
 52.     APPEND(classifier, Linear(in_features, units))
 53.     APPEND(classifier, ReLU())
 54.     APPEND(classifier, Dropout(p=dropout))
 55.     in_features ← units
 56. END FOR
-57. 
+57.
 58. // Output layer
 59. APPEND(classifier, Linear(in_features, num_classes))
-60. 
+60.
 61. RETURN {features: layers, classifier: classifier}
 ```
 
@@ -190,10 +198,10 @@ Output:
 28.         ELSE:
 29.             loss_fn ← "CrossEntropyLoss"
 30.         END IF
-31.         
+31.
 32.     CASE "segmentation":
 33.         loss_fn ← "CrossEntropyLoss"  // or "DiceLoss"
-34.         
+34.
 35.     CASE "detection":
 36.         loss_fn ← "MultiTaskLoss"    // Classification + Regression
 
@@ -237,6 +245,7 @@ Output:
 ## Common Architecture Patterns
 
 ### VGG-Style (Sequential)
+
 ```
 Conv(3, 64) → Conv(64, 64) → Pool
 → Conv(64, 128) → Conv(128, 128) → Pool
@@ -245,6 +254,7 @@ Conv(3, 64) → Conv(64, 64) → Pool
 ```
 
 ### ResNet-Style (Skip Connections)
+
 ```
 Input → Conv → BN → ReLU → MaxPool
 → ResBlock × 2 (64 filters)
@@ -255,6 +265,7 @@ Input → Conv → BN → ReLU → MaxPool
 ```
 
 ResBlock:
+
 ```
 Input → Conv → BN → ReLU → Conv → BN → (+ Input) → ReLU
 ```
@@ -282,7 +293,7 @@ Example: 224×224 input with 3 Conv+Pool blocks
 ## Transfer Learning Configuration
 
 ```
-Algorithm ConfigureTransferLearning(base_model, num_classes, 
+Algorithm ConfigureTransferLearning(base_model, num_classes,
                                      freeze_strategy="partial")
 Input:
     - base_model: pretrained model (e.g., ResNet50)
@@ -301,13 +312,13 @@ Output:
 6.     CASE "all":
 7.         FOR param IN base_model.parameters() EXCEPT fc:
 8.             param.requires_grad ← FALSE
-9.             
+9.
 10.    CASE "partial":
 11.        // Freeze early layers, train later layers
 12.        FOR layer IN base_model.layers[:4]:
 13.            FOR param IN layer.parameters():
 14.                param.requires_grad ← FALSE
-15.                
+15.
 16.    CASE "none":
 17.        // Train all layers
 18.        pass
@@ -326,44 +337,45 @@ Output:
 
 ## Quick Reference: Layer Choices
 
-| Layer Type | When to Use | Typical Values |
-|------------|-------------|----------------|
-| Conv 3×3 | Default choice | stride=1, padding=1 |
-| Conv 1×1 | Dimension reduction | Bottleneck layers |
-| Conv 5×5 | Early layers (receptive field) | First layer only |
-| MaxPool 2×2 | Downsampling | stride=2 |
-| GlobalAvgPool | Final layer before FC | output=1 |
-| BatchNorm | After every conv | Default settings |
-| Dropout | Before FC layers | p=0.3-0.5 |
+| Layer Type    | When to Use                    | Typical Values      |
+| ------------- | ------------------------------ | ------------------- |
+| Conv 3×3      | Default choice                 | stride=1, padding=1 |
+| Conv 1×1      | Dimension reduction            | Bottleneck layers   |
+| Conv 5×5      | Early layers (receptive field) | First layer only    |
+| MaxPool 2×2   | Downsampling                   | stride=2            |
+| GlobalAvgPool | Final layer before FC          | output=1            |
+| BatchNorm     | After every conv               | Default settings    |
+| Dropout       | Before FC layers               | p=0.3-0.5           |
 
 ---
 
 ## Python Implementation (PyTorch)
+
 ```python
 import torch.nn as nn
 
 class SimpleCNN(nn.Module):
     def __init__(self, num_classes=10):
         super().__init__()
-        
+
         # Feature extractor
         self.features = nn.Sequential(
             nn.Conv2d(3, 64, 3, padding=1),
             nn.BatchNorm2d(64),
             nn.ReLU(),
             nn.MaxPool2d(2),
-            
+
             nn.Conv2d(64, 128, 3, padding=1),
             nn.BatchNorm2d(128),
             nn.ReLU(),
             nn.MaxPool2d(2),
-            
+
             nn.Conv2d(128, 256, 3, padding=1),
             nn.BatchNorm2d(256),
             nn.ReLU(),
             nn.AdaptiveAvgPool2d(1)
         )
-        
+
         # Classifier
         self.classifier = nn.Sequential(
             nn.Flatten(),
@@ -372,7 +384,7 @@ class SimpleCNN(nn.Module):
             nn.Dropout(0.5),
             nn.Linear(128, num_classes)
         )
-    
+
     def forward(self, x):
         x = self.features(x)
         x = self.classifier(x)

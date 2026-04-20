@@ -1,4 +1,6 @@
-# Gradient Descent Algorithm
+---
+title: Gradient Descent
+---
 
 ## Overview
 

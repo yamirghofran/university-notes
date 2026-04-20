@@ -1,9 +1,13 @@
-# Non-Maximum Suppression (NMS)
+---
+title: Non-Maximum Supression
+---
 
 ## Overview
+
 NMS is a post-processing technique that removes duplicate detections by keeping only the strongest response in a local neighborhood.
 
 ## Applications
+
 - Edge detection (Canny)
 - Object detection (YOLO, Faster R-CNN)
 - Corner detection
@@ -13,7 +17,9 @@ NMS is a post-processing technique that removes duplicate detections by keeping 
 ---
 
 ## Core Idea
+
 When multiple detections overlap significantly and likely correspond to the same object:
+
 1. Keep the detection with highest confidence/score
 2. Suppress (remove) nearby detections with lower scores
 
@@ -45,26 +51,26 @@ Output:
 // ============================================
 5. FOR i = 0 TO N-1 DO:
 6.     idx ← indices[i]
-7.     
+7.
 8.     // Skip if already suppressed
 9.     IF suppressed[idx] THEN:
 10.        CONTINUE
 11.    END IF
-12.    
+12.
 13.    // Keep this detection
 14.    APPEND(selected, idx)
-15.    
+15.
 16.    // Suppress overlapping detections
 17.    FOR j = i+1 TO N-1 DO:
 18.        other_idx ← indices[j]
-19.        
+19.
 20.        IF suppressed[other_idx] THEN:
 21.            CONTINUE
 22.        END IF
-23.        
+23.
 24.        // Compute overlap
 25.        overlap ← COMPUTE_OVERLAP(detections[idx], detections[other_idx])
-26.        
+26.
 27.        // Suppress if overlap exceeds threshold
 28.        IF overlap > overlap_threshold THEN:
 29.            suppressed[other_idx] ← TRUE
@@ -135,16 +141,16 @@ Output:
 6. sorted_indices ← ARGSORT(scores, DESCENDING)
 
 7. kept ← []
-8. 
+8.
 9. WHILE LENGTH(sorted_indices) > 0 DO:
 10.    // Pick box with highest score
 11.    current ← sorted_indices[0]
 12.    APPEND(kept, current)
-13.    
+13.
 14.    IF max_boxes > 0 AND LENGTH(kept) >= max_boxes THEN:
 15.        BREAK
 16.    END IF
-17.    
+17.
 18.    // Compute IoU with remaining boxes
 19.    ious ← []
 20.    FOR i = 1 TO LENGTH(sorted_indices)-1 DO:
@@ -152,7 +158,7 @@ Output:
 22.        iou ← ComputeIoU(boxes[current], boxes[other])
 23.        APPEND(ious, iou)
 24.    END FOR
-25.    
+25.
 26.    // Keep only boxes with IoU below threshold
 27.    remaining ← []
 28.    FOR i = 1 TO LENGTH(sorted_indices)-1 DO:
@@ -160,7 +166,7 @@ Output:
 30.            APPEND(remaining, sorted_indices[i])
 31.        END IF
 32.    END FOR
-33.    
+33.
 34.    sorted_indices ← remaining
 35. END WHILE
 
@@ -185,39 +191,39 @@ Output:
 
 3. FOR y = 1 TO rows-2 DO:
 4.     FOR x = 1 TO cols-2 DO:
-5.         
+5.
 6.         current_mag ← gradient_magnitude[y, x]
 7.         angle ← gradient_direction[y, x]
-8.         
+8.
 9.         // Skip if no edge
 10.        IF current_mag == 0 THEN:
 11.            CONTINUE
 12.        END IF
-13.        
+13.
 14.        // Quantize angle to 4 directions
 15.        angle_deg ← DEGREES(angle)
-16.        
+16.
 17.        IF (-22.5 <= angle_deg < 22.5) OR (157.5 <= angle_deg) OR (angle_deg < -157.5) THEN:
 18.            // 0° - horizontal edge, compare left and right
-19.            neighbors ← [gradient_magnitude[y, x-1], 
+19.            neighbors ← [gradient_magnitude[y, x-1],
 20.                         gradient_magnitude[y, x+1]]
-21.                         
+21.
 22.        ELSE IF (22.5 <= angle_deg < 67.5) OR (-157.5 <= angle_deg < -112.5) THEN:
 23.            // 45° - diagonal, compare top-right and bottom-left
-24.            neighbors ← [gradient_magnitude[y-1, x+1], 
+24.            neighbors ← [gradient_magnitude[y-1, x+1],
 25.                         gradient_magnitude[y+1, x-1]]
-26.                         
+26.
 27.        ELSE IF (67.5 <= angle_deg < 112.5) OR (-112.5 <= angle_deg < -67.5) THEN:
 28.            // 90° - vertical edge, compare top and bottom
-29.            neighbors ← [gradient_magnitude[y-1, x], 
+29.            neighbors ← [gradient_magnitude[y-1, x],
 30.                         gradient_magnitude[y+1, x]]
-31.                         
+31.
 32.        ELSE:
 33.            // 135° - other diagonal, compare top-left and bottom-right
-34.            neighbors ← [gradient_magnitude[y-1, x-1], 
+34.            neighbors ← [gradient_magnitude[y-1, x-1],
 35.                         gradient_magnitude[y+1, x+1]]
 36.        END IF
-37.        
+37.
 38.        // Keep only if local maximum
 39.        IF current_mag >= MAX(neighbors) THEN:
 40.            nms_edges[y, x] ← current_mag
@@ -252,21 +258,21 @@ Output:
 
 3. FOR i = 0 TO N-1 DO:
 4.     max_idx ← indices[i]
-5.     
+5.
 6.     FOR j = i+1 TO N-1 DO:
 7.         idx ← indices[j]
 8.         iou ← ComputeIoU(boxes[max_idx], boxes[idx])
-9.         
+9.
 10.        // Decay score based on overlap
 11.        SWITCH method:
 12.            CASE "linear":
 13.                IF iou > threshold THEN:
 14.                    scores[idx] ← scores[idx] × (1 - iou)
 15.                END IF
-16.                
+16.
 17.            CASE "gaussian":
 18.                scores[idx] ← scores[idx] × EXP(-iou² / sigma)
-19.                
+19.
 20.            CASE "hard":
 21.                IF iou > threshold THEN:
 22.                    scores[idx] ← 0
@@ -283,16 +289,17 @@ Output:
 
 ## Summary Table
 
-| Application | Overlap Measure | Threshold | Notes |
-|-------------|-----------------|-----------|-------|
-| Canny edges | Gradient comparison | Local max | Along gradient direction |
-| Object detection | IoU | 0.5 | Class-aware or class-agnostic |
-| Hough transform | Distance in parameter space | Varies | Peak detection |
-| Corner detection | Euclidean distance | 10-20 pixels | Distance-based |
+| Application      | Overlap Measure             | Threshold    | Notes                         |
+| ---------------- | --------------------------- | ------------ | ----------------------------- |
+| Canny edges      | Gradient comparison         | Local max    | Along gradient direction      |
+| Object detection | IoU                         | 0.5          | Class-aware or class-agnostic |
+| Hough transform  | Distance in parameter space | Varies       | Peak detection                |
+| Corner detection | Euclidean distance          | 10-20 pixels | Distance-based                |
 
 ---
 
 ## Python Implementation
+
 ```python
 import numpy as np
 
@@ -303,23 +310,23 @@ def nms_boxes(boxes, scores, iou_threshold=0.5):
     """
     # Sort by score
     indices = np.argsort(scores)[::-1]
-    
+
     keep = []
     while len(indices) > 0:
         # Pick box with highest score
         current = indices[0]
         keep.append(current)
-        
+
         if len(indices) == 1:
             break
-        
+
         # Compute IoU with remaining boxes
         ious = compute_iou(boxes[current], boxes[indices[1:]])
-        
+
         # Keep boxes with IoU below threshold
         mask = ious <= iou_threshold
         indices = indices[1:][mask]
-    
+
     return keep
 
 def compute_iou(box1, boxes):
@@ -328,18 +335,18 @@ def compute_iou(box1, boxes):
     y1 = np.maximum(box1[1], boxes[:, 1])
     x2 = np.minimum(box1[2], boxes[:, 2])
     y2 = np.minimum(box1[3], boxes[:, 3])
-    
+
     intersection = np.maximum(0, x2 - x1) * np.maximum(0, y2 - y1)
-    
+
     area1 = (box1[2] - box1[0]) * (box1[3] - box1[1])
     area2 = (boxes[:, 2] - boxes[:, 0]) * (boxes[:, 3] - boxes[:, 1])
     union = area1 + area2 - intersection
-    
+
     return intersection / union
 
 # OpenCV NMS
 import cv2
-indices = cv2.dnn.NMSBoxes(boxes, scores, 
+indices = cv2.dnn.NMSBoxes(boxes, scores,
                            score_threshold=0.5,
                            nms_threshold=0.4)
 ```
